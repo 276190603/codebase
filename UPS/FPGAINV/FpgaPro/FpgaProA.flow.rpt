@@ -1,0 +1,131 @@
+Flow report for FpgaProA
+Mon Jul 09 09:55:11 2018
+Quartus II 64-Bit Version 11.0 Build 157 04/27/2011 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Flow Summary                                                                   ;
++------------------------------------+-------------------------------------------+
+; Flow Status                        ; Successful - Mon Jul 09 09:55:11 2018     ;
+; Quartus II 64-Bit Version          ; 11.0 Build 157 04/27/2011 SJ Full Version ;
+; Revision Name                      ; FpgaProA                                  ;
+; Top-level Entity Name              ; FpgaProA_1                                ;
+; Family                             ; Cyclone II                                ;
+; Device                             ; EP2C5T144C8                               ;
+; Timing Models                      ; Final                                     ;
+; Total logic elements               ; 84 / 4,608 ( 2 % )                        ;
+;     Total combinational functions  ; 66 / 4,608 ( 1 % )                        ;
+;     Dedicated logic registers      ; 63 / 4,608 ( 1 % )                        ;
+; Total registers                    ; 63                                        ;
+; Total pins                         ; 40 / 89 ( 45 % )                          ;
+; Total virtual pins                 ; 0                                         ;
+; Total memory bits                  ; 0 / 119,808 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                            ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                             ;
++------------------------------------+-------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 07/09/2018 09:54:35 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; FpgaProA            ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                      ;
++--------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 180419529409414.153110127402024 ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                              ; --            ; --          ; 1              ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; 1                               ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                            ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                 ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; FpgaProA.qpf                    ; --            ; --          ; 1              ;
+; EDA_TEST_BENCH_MODULE_NAME           ; 1                               ; --            ; --          ; 1              ;
+; EDA_TEST_BENCH_NAME                  ; 1                               ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                              ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                               ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; 16764057                        ; --            ; FpgaProA_1  ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING           ; --            ; FpgaProA_1  ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                          ; --            ; FpgaProA_1  ; Top            ;
+; TOP_LEVEL_ENTITY                     ; FpgaProA_1                      ; FpgaProA      ; --          ; --             ;
++--------------------------------------+---------------------------------+---------------+-------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 343 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:13     ; 1.0                     ; 418 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 344 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 302 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 289 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:28     ; --                      ; --                  ; 00:00:09                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; TEW-PC           ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; TEW-PC           ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; TEW-PC           ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; TEW-PC           ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer        ; TEW-PC           ; Windows 7 ; 6.1        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off FpgaProA -c FpgaProA
+quartus_fit --read_settings_files=off --write_settings_files=off FpgaProA -c FpgaProA
+quartus_sta FpgaProA -c FpgaProA
+quartus_asm --read_settings_files=off --write_settings_files=off FpgaProA -c FpgaProA
+quartus_eda --read_settings_files=off --write_settings_files=off FpgaProA -c FpgaProA
+
+
+

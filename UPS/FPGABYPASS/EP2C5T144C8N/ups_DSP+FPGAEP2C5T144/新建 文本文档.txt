@@ -1,0 +1,110 @@
+module cpld1(SCR1,SCR2,SCR3,SCR4,SCR5,SCR6,CLK,ctrl);
+
+output SCR1;
+output SCR2;
+output SCR3;
+output SCR4;
+output SCR5;
+output SCR6;
+
+input CLK;
+input ctrl;
+
+reg SCR1;
+reg SCR2;
+reg SCR3;
+reg SCR4;
+reg SCR5;
+reg SCR6;
+
+reg [19:0] BUFFER_SCR;
+reg [3:0] STATUS;
+
+always @ (posedge CLK)
+begin
+	case(ctrl)
+	1'b0: begin BUFFER_SCR <= BUFFER_SCR+1'b1 ;if(BUFFER_SCR == 20'd600000) BUFFER_SCR <= 20'd0; end
+	1'b1: BUFFER_SCR <=20'd166666 ;
+	
+	endcase
+end
+
+always@(posedge CLK)
+	begin
+		if(BUFFER_SCR==20'd0)
+			STATUS=4'd1;
+		if(BUFFER_SCR==20'd5000)
+			STATUS=4'd2;
+		
+		if(BUFFER_SCR==20'd100000)
+			STATUS=4'd3;		
+		if(BUFFER_SCR==20'd105000)
+			STATUS=4'd4;	
+			
+		if(BUFFER_SCR==20'd200000)
+			STATUS=4'd5;
+		if(BUFFER_SCR==20'd205000)
+			STATUS=4'd6;		
+			
+		if(BUFFER_SCR==20'd300000)
+			STATUS=4'd7;		
+		if(BUFFER_SCR==20'd305000)
+			STATUS=4'd8;		
+			
+		if(BUFFER_SCR==20'd400000)
+			STATUS=4'd9;
+		if(BUFFER_SCR==20'd405000)
+			STATUS=4'd10;
+			
+		if(BUFFER_SCR==20'd500000)
+			STATUS=4'd11;	
+		if(BUFFER_SCR==20'd505000)
+			STATUS=4'd12;			
+	end
+
+always@(posedge CLK)
+begin
+	if(ctrl==1'b0)
+	begin
+	case(STATUS)
+	
+	4'd1: begin SCR1<=1'b1;SCR6<=1'b1; end
+	4'd2: begin SCR1<=1'b0;SCR6<=1'b0; end
+	
+	4'd3: begin SCR1<=1'b1;SCR2<=1'b1; end
+	4'd4: begin SCR1<=1'b0;SCR2<=1'b0; end
+	
+	4'd5: begin SCR2<=1'b1;SCR3<=1'b1; end
+	4'd6: begin SCR2<=1'b0;SCR3<=1'b0; end
+	
+	4'd7: begin SCR3<=1'b1;SCR4<=1'b1; end
+	4'd8: begin SCR3<=1'b0;SCR4<=1'b0; end
+	
+	4'd9: begin SCR4<=1'b1;SCR5<=1'b1; end
+	4'd10:begin SCR4<=1'b0;SCR5<=1'b0; end
+	
+	4'd11:begin SCR5<=1'b1;SCR6<=1'b1; end
+	4'd12:begin SCR5<=1'b0;SCR6<=1'b0; end
+	endcase
+	end
+	else begin SCR1<=1'b0;SCR2<=1'b0;SCR3<=1'b0;SCR4<=1'b0;SCR5<=1'b0;SCR6<=1'b0;  end
+		
+end	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+endmodule 

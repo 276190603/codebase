@@ -1,0 +1,108 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2011 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 11.0 Build 157 04/27/2011 SJ Full Version
+# Date created = 14:13:26  January 29, 2017
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		FpgaProA_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C5T144C8
+set_global_assignment -name TOP_LEVEL_ENTITY FpgaProA_1
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 11.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:13:26  JANUARY 29, 2017"
+set_global_assignment -name LAST_QUARTUS_VERSION 11.0
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name VERILOG_FILE FpgaProA.v
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name VERILOG_FILE FpgaProA_1.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name DEVICE_MIGRATION_LIST "EP2C5T144C8,EP2C5T144I8,EP2C8T144C8,EP2C8T144I8"
+set_location_assignment PIN_114 -to BP_ON
+set_location_assignment PIN_17 -to CLK0
+set_location_assignment PIN_91 -to CLK4
+set_location_assignment PIN_137 -to DR[6]
+set_location_assignment PIN_139 -to DR[5]
+set_location_assignment PIN_141 -to DR[4]
+set_location_assignment PIN_142 -to DR[3]
+set_location_assignment PIN_143 -to DR[2]
+set_location_assignment PIN_144 -to DR[1]
+set_location_assignment PIN_4 -to ENABLE
+set_location_assignment PIN_93 -to INT1
+set_location_assignment PIN_65 -to PWM[6]
+set_location_assignment PIN_67 -to PWM[5]
+set_location_assignment PIN_69 -to PWM[4]
+set_location_assignment PIN_70 -to PWM[3]
+set_location_assignment PIN_71 -to PWM[2]
+set_location_assignment PIN_72 -to PWM[1]
+set_location_assignment PIN_113 -to Q2_ON
+set_location_assignment PIN_132 -to SO4
+set_location_assignment PIN_133 -to SO5
+set_location_assignment PIN_134 -to SO6
+set_location_assignment PIN_136 -to TRIP1
+set_location_assignment PIN_135 -to TRIP2
+set_location_assignment PIN_115 -to WG1
+set_location_assignment PIN_73 -to XA[3]
+set_location_assignment PIN_74 -to XA[2]
+set_location_assignment PIN_75 -to XA[1]
+set_location_assignment PIN_104 -to XD[7]
+set_location_assignment PIN_103 -to XD[6]
+set_location_assignment PIN_101 -to XD[5]
+set_location_assignment PIN_100 -to XD[4]
+set_location_assignment PIN_99 -to XD[3]
+set_location_assignment PIN_97 -to XD[2]
+set_location_assignment PIN_96 -to XD[1]
+set_location_assignment PIN_92 -to XD[0]
+set_location_assignment PIN_86 -to XRDn
+set_location_assignment PIN_87 -to XWE0n
+set_location_assignment PIN_112 -to YULIU
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH 1 -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME 1 -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id 1
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME 1 -section_id 1
+set_global_assignment -name EDA_TEST_BENCH_FILE FpgaProA.qpf -section_id 1
+set_location_assignment IOBANK_3 -to XZCS7n
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS PROGRAMMING PIN"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

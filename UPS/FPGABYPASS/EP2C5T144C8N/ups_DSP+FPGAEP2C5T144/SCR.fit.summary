@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Jul 26 09:49:28 2018
+Quartus II 64-Bit Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : SCR
+Top-level Entity Name : SCR
+Family : Cyclone II
+Device : EP2C5T144C8
+Timing Models : Final
+Total logic elements : 50 / 4,608 ( 1 % )
+    Total combinational functions : 42 / 4,608 ( 1 % )
+    Dedicated logic registers : 36 / 4,608 ( 1 % )
+Total registers : 36
+Total pins : 30 / 89 ( 34 % )
+Total virtual pins : 0
+Total memory bits : 0 / 119,808 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

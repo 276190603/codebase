@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Jul 09 09:54:43 2018
+Quartus II 64-Bit Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : FpgaProA
+Top-level Entity Name : FpgaProA_1
+Family : Cyclone II
+Total logic elements : 91
+    Total combinational functions : 66
+    Dedicated logic registers : 63
+Total registers : 63
+Total pins : 40
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,11 @@
+mudole FpgaProA(
+// input
+input YULIU,  
+input Q2_ON,
+input BP_ON,
+input WG1,
+input CLK0,
+input CLK4,
+input PWM[5:0],
+input XA[]
+)

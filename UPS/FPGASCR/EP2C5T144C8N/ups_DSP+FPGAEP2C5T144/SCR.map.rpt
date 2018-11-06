@@ -1,0 +1,350 @@
+Analysis & Synthesis report for SCR
+Wed Jul 18 09:40:56 2018
+Quartus II 64-Bit Version 11.0 Build 157 04/27/2011 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |SCR|STATUS
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                   ;
++------------------------------------+-------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jul 18 09:40:56 2018     ;
+; Quartus II 64-Bit Version          ; 11.0 Build 157 04/27/2011 SJ Full Version ;
+; Revision Name                      ; SCR                                       ;
+; Top-level Entity Name              ; SCR                                       ;
+; Family                             ; Cyclone II                                ;
+; Total logic elements               ; 151                                       ;
+;     Total combinational functions  ; 151                                       ;
+;     Dedicated logic registers      ; 32                                        ;
+; Total registers                    ; 32                                        ;
+; Total pins                         ; 35                                        ;
+; Total virtual pins                 ; 0                                         ;
+; Total memory bits                  ; 0                                         ;
+; Embedded Multiplier 9-bit elements ; 0                                         ;
+; Total PLLs                         ; 0                                         ;
++------------------------------------+-------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C5T144C8        ;                    ;
+; Top-level entity name                                                      ; SCR                ; SCR                ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; Off                ; Off                ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                   ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+
+; SCR.v                            ; yes             ; User Verilog HDL File  ; C:/Users/TEW/Desktop/UpsPro/UPS/SCR68/EP2C5T144C8N/ups_DSP+FPGAEP2C5T144/SCR.v ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 151   ;
+;                                             ;       ;
+; Total combinational functions               ; 151   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 75    ;
+;     -- 3 input functions                    ; 22    ;
+;     -- <=2 input functions                  ; 54    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 128   ;
+;     -- arithmetic mode                      ; 23    ;
+;                                             ;       ;
+; Total registers                             ; 32    ;
+;     -- Dedicated logic registers            ; 32    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 35    ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 32    ;
+; Total fan-out                               ; 547   ;
+; Average fan-out                             ; 2.51  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |SCR                       ; 151 (151)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |SCR                ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------+
+; State Machine - |SCR|STATUS ;
++-------------+---------------+
+; Name        ; STATUS.0001   ;
++-------------+---------------+
+; STATUS.0000 ; 0             ;
+; STATUS.0001 ; 1             ;
++-------------+---------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; STATUS~4                              ; Lost fanout        ;
+; STATUS~5                              ; Lost fanout        ;
+; STATUS~6                              ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 32    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; ENABLE~reg0                            ; 2       ;
+; BUFFER_SCR[7]                          ; 5       ;
+; BUFFER_SCR[20]                         ; 2       ;
+; BUFFER_SCR[4]                          ; 11      ;
+; BUFFER_SCR[8]                          ; 9       ;
+; BUFFER_SCR[10]                         ; 8       ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered  ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------+----------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; |SCR|STATUS ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+-------------+----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 11.0 Build 157 04/27/2011 SJ Full Version
+    Info: Processing started: Wed Jul 18 09:40:48 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SCR -c SCR
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Found 1 design units, including 1 entities, in source file scr.v
+    Info: Found entity 1: SCR
+Info: Elaborating entity "SCR" for the top level hierarchy
+Warning (10034): Output port "TRIP1" at SCR.v(47) has no driver
+Warning (10034): Output port "TRIP2" at SCR.v(48) has no driver
+Warning (10034): Output port "INT1" at SCR.v(50) has no driver
+Warning: The following bidir pins have no drivers
+    Warning: Bidir "XD0" has no driver
+    Warning: Bidir "XD1" has no driver
+    Warning: Bidir "XD2" has no driver
+    Warning: Bidir "XD3" has no driver
+    Warning: Bidir "XD4" has no driver
+    Warning: Bidir "XD5" has no driver
+    Warning: Bidir "XD6" has no driver
+    Warning: Bidir "XD7" has no driver
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "TRIP1" is stuck at GND
+    Warning (13410): Pin "TRIP2" is stuck at GND
+    Warning (13410): Pin "INT1" is stuck at GND
+Info: 3 registers lost all their fanouts during netlist optimizations. The first 3 are displayed below.
+    Info: Register "STATUS~4" lost all its fanouts during netlist optimizations.
+    Info: Register "STATUS~5" lost all its fanouts during netlist optimizations.
+    Info: Register "STATUS~6" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file C:/Users/TEW/Desktop/UpsPro/UPS/SCR68/EP2C5T144C8N/ups_DSP+FPGAEP2C5T144/SCR.map.smsg
+Info: Generating hard_block partition "hard_block:auto_generated_inst"
+Warning: Design contains 14 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "YULIU"
+    Warning (15610): No output dependent on input pin "Q2_ON"
+    Warning (15610): No output dependent on input pin "BP_ON"
+    Warning (15610): No output dependent on input pin "WG1"
+    Warning (15610): No output dependent on input pin "XRDn"
+    Warning (15610): No output dependent on input pin "XWE0n"
+    Warning (15610): No output dependent on input pin "XZCS7n"
+    Warning (15610): No output dependent on input pin "SO4"
+    Warning (15610): No output dependent on input pin "SO5"
+    Warning (15610): No output dependent on input pin "SO6"
+    Warning (15610): No output dependent on input pin "XA0"
+    Warning (15610): No output dependent on input pin "XA1"
+    Warning (15610): No output dependent on input pin "XA2"
+    Warning (15610): No output dependent on input pin "XA3"
+Info: Implemented 186 device resources after synthesis - the final resource count might be different
+    Info: Implemented 17 input pins
+    Info: Implemented 10 output pins
+    Info: Implemented 8 bidirectional pins
+    Info: Implemented 151 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 343 megabytes
+    Info: Processing ended: Wed Jul 18 09:40:56 2018
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/TEW/Desktop/UpsPro/UPS/SCR68/EP2C5T144C8N/ups_DSP+FPGAEP2C5T144/SCR.map.smsg.
+
+

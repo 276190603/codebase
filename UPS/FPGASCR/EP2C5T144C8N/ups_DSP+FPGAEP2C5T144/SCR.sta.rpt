@@ -1,0 +1,1133 @@
+TimeQuest Timing Analyzer report for SCR
+Wed Jul 18 09:41:17 2018
+Quartus II 64-Bit Version 11.0 Build 157 04/27/2011 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLK'
+ 12. Slow Model Hold: 'CLK'
+ 13. Slow Model Minimum Pulse Width: 'CLK'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'CLK'
+ 24. Fast Model Hold: 'CLK'
+ 25. Fast Model Minimum Pulse Width: 'CLK'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                      ;
++--------------------+---------------------------------------------------+
+; Quartus II Version ; Version 11.0 Build 157 04/27/2011 SJ Full Version ;
+; Revision Name      ; SCR                                               ;
+; Device Family      ; Cyclone II                                        ;
+; Device Name        ; EP2C5T144C8                                       ;
+; Timing Models      ; Final                                             ;
+; Delay Model        ; Combined                                          ;
+; Rise/Fall Delays   ; Unavailable                                       ;
++--------------------+---------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ; < 0.1%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 108.78 MHz ; 108.78 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -8.193 ; -177.781      ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.499 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; -1.941 ; -49.429               ;
++-------+--------+-----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                     ;
++--------+----------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+-------------+--------------+-------------+--------------+------------+------------+
+; -8.193 ; BUFFER_SCR[2]  ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; -0.005     ; 9.228      ;
+; -8.046 ; BUFFER_SCR[2]  ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; -0.007     ; 9.079      ;
+; -7.865 ; BUFFER_SCR[2]  ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; -0.005     ; 8.900      ;
+; -7.831 ; BUFFER_SCR[16] ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.886      ;
+; -7.828 ; BUFFER_SCR[2]  ; SCR3~reg0   ; CLK          ; CLK         ; 1.000        ; -0.001     ; 8.867      ;
+; -7.765 ; BUFFER_SCR[16] ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; 0.018      ; 8.823      ;
+; -7.720 ; BUFFER_SCR[18] ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.775      ;
+; -7.718 ; BUFFER_SCR[0]  ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.773      ;
+; -7.664 ; BUFFER_SCR[14] ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.695      ;
+; -7.634 ; BUFFER_SCR[2]  ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; -0.002     ; 8.672      ;
+; -7.608 ; BUFFER_SCR[2]  ; ENABLE~reg0 ; CLK          ; CLK         ; 1.000        ; -0.005     ; 8.643      ;
+; -7.596 ; BUFFER_SCR[19] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; 0.001      ; 8.637      ;
+; -7.593 ; BUFFER_SCR[6]  ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.636      ;
+; -7.573 ; BUFFER_SCR[18] ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; 0.013      ; 8.626      ;
+; -7.558 ; BUFFER_SCR[13] ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.601      ;
+; -7.558 ; BUFFER_SCR[18] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.613      ;
+; -7.555 ; BUFFER_SCR[9]  ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.598      ;
+; -7.544 ; BUFFER_SCR[11] ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; 0.010      ; 8.594      ;
+; -7.541 ; BUFFER_SCR[10] ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.584      ;
+; -7.534 ; BUFFER_SCR[0]  ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.589      ;
+; -7.509 ; BUFFER_SCR[2]  ; STATUS.0001 ; CLK          ; CLK         ; 1.000        ; -0.002     ; 8.547      ;
+; -7.507 ; BUFFER_SCR[14] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.538      ;
+; -7.495 ; BUFFER_SCR[19] ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; 0.001      ; 8.536      ;
+; -7.470 ; BUFFER_SCR[16] ; SCR3~reg0   ; CLK          ; CLK         ; 1.000        ; 0.019      ; 8.529      ;
+; -7.426 ; BUFFER_SCR[16] ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; 0.013      ; 8.479      ;
+; -7.416 ; BUFFER_SCR[14] ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; -0.006     ; 8.450      ;
+; -7.413 ; BUFFER_SCR[16] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.468      ;
+; -7.411 ; BUFFER_SCR[13] ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; 0.001      ; 8.452      ;
+; -7.401 ; BUFFER_SCR[11] ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; 0.010      ; 8.451      ;
+; -7.394 ; BUFFER_SCR[10] ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; 0.001      ; 8.435      ;
+; -7.394 ; BUFFER_SCR[18] ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; 0.018      ; 8.452      ;
+; -7.387 ; BUFFER_SCR[0]  ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; 0.013      ; 8.440      ;
+; -7.387 ; BUFFER_SCR[11] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; 0.010      ; 8.437      ;
+; -7.381 ; BUFFER_SCR[23] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; -0.004     ; 8.417      ;
+; -7.381 ; BUFFER_SCR[16] ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.436      ;
+; -7.380 ; BUFFER_SCR[5]  ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.423      ;
+; -7.379 ; BUFFER_SCR[4]  ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.410      ;
+; -7.356 ; BUFFER_SCR[3]  ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.387      ;
+; -7.355 ; BUFFER_SCR[18] ; SCR3~reg0   ; CLK          ; CLK         ; 1.000        ; 0.019      ; 8.414      ;
+; -7.345 ; BUFFER_SCR[0]  ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; 0.018      ; 8.403      ;
+; -7.341 ; BUFFER_SCR[22] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; -0.004     ; 8.377      ;
+; -7.328 ; BUFFER_SCR[18] ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.383      ;
+; -7.323 ; BUFFER_SCR[2]  ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; -0.005     ; 8.358      ;
+; -7.311 ; BUFFER_SCR[5]  ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.354      ;
+; -7.301 ; BUFFER_SCR[14] ; ENABLE~reg0 ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.332      ;
+; -7.296 ; BUFFER_SCR[11] ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; 0.013      ; 8.349      ;
+; -7.287 ; BUFFER_SCR[0]  ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.342      ;
+; -7.279 ; BUFFER_SCR[6]  ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.322      ;
+; -7.249 ; BUFFER_SCR[11] ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; 0.008      ; 8.297      ;
+; -7.248 ; BUFFER_SCR[19] ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; 0.001      ; 8.289      ;
+; -7.233 ; BUFFER_SCR[5]  ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; 0.001      ; 8.274      ;
+; -7.230 ; BUFFER_SCR[21] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; -0.004     ; 8.266      ;
+; -7.229 ; BUFFER_SCR[17] ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.284      ;
+; -7.222 ; BUFFER_SCR[4]  ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.253      ;
+; -7.220 ; BUFFER_SCR[12] ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.251      ;
+; -7.213 ; BUFFER_SCR[10] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.256      ;
+; -7.213 ; BUFFER_SCR[7]  ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.256      ;
+; -7.206 ; BUFFER_SCR[13] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.249      ;
+; -7.202 ; BUFFER_SCR[14] ; STATUS.0001 ; CLK          ; CLK         ; 1.000        ; -0.006     ; 8.236      ;
+; -7.199 ; BUFFER_SCR[1]  ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.230      ;
+; -7.194 ; BUFFER_SCR[9]  ; SCR3~reg0   ; CLK          ; CLK         ; 1.000        ; 0.007      ; 8.241      ;
+; -7.193 ; BUFFER_SCR[13] ; SCR3~reg0   ; CLK          ; CLK         ; 1.000        ; 0.007      ; 8.240      ;
+; -7.181 ; BUFFER_SCR[11] ; ENABLE~reg0 ; CLK          ; CLK         ; 1.000        ; 0.010      ; 8.231      ;
+; -7.177 ; BUFFER_SCR[1]  ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.208      ;
+; -7.176 ; BUFFER_SCR[10] ; SCR3~reg0   ; CLK          ; CLK         ; 1.000        ; 0.007      ; 8.223      ;
+; -7.170 ; BUFFER_SCR[13] ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.213      ;
+; -7.169 ; BUFFER_SCR[0]  ; SCR3~reg0   ; CLK          ; CLK         ; 1.000        ; 0.019      ; 8.228      ;
+; -7.167 ; BUFFER_SCR[23] ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; -0.004     ; 8.203      ;
+; -7.163 ; BUFFER_SCR[17] ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; 0.018      ; 8.221      ;
+; -7.163 ; BUFFER_SCR[3]  ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.194      ;
+; -7.154 ; BUFFER_SCR[15] ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; -0.006     ; 8.188      ;
+; -7.150 ; BUFFER_SCR[9]  ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; 0.001      ; 8.191      ;
+; -7.149 ; BUFFER_SCR[12] ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.180      ;
+; -7.137 ; BUFFER_SCR[9]  ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.180      ;
+; -7.135 ; BUFFER_SCR[18] ; ENABLE~reg0 ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.190      ;
+; -7.134 ; BUFFER_SCR[15] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.165      ;
+; -7.134 ; BUFFER_SCR[19] ; SCR3~reg0   ; CLK          ; CLK         ; 1.000        ; 0.005      ; 8.179      ;
+; -7.131 ; BUFFER_SCR[4]  ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; -0.006     ; 8.165      ;
+; -7.127 ; BUFFER_SCR[22] ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; -0.004     ; 8.163      ;
+; -7.115 ; BUFFER_SCR[11] ; SCR3~reg0   ; CLK          ; CLK         ; 1.000        ; 0.014      ; 8.169      ;
+; -7.111 ; BUFFER_SCR[8]  ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.154      ;
+; -7.108 ; BUFFER_SCR[15] ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.139      ;
+; -7.094 ; BUFFER_SCR[17] ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.149      ;
+; -7.090 ; BUFFER_SCR[19] ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; -0.001     ; 8.129      ;
+; -7.082 ; BUFFER_SCR[11] ; STATUS.0001 ; CLK          ; CLK         ; 1.000        ; 0.013      ; 8.135      ;
+; -7.074 ; BUFFER_SCR[10] ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; 0.006      ; 8.120      ;
+; -7.067 ; BUFFER_SCR[7]  ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.110      ;
+; -7.064 ; BUFFER_SCR[6]  ; SCR4~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.107      ;
+; -7.063 ; BUFFER_SCR[12] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; -0.009     ; 8.094      ;
+; -7.063 ; BUFFER_SCR[5]  ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; 0.006      ; 8.109      ;
+; -7.056 ; BUFFER_SCR[13] ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; 0.006      ; 8.102      ;
+; -7.052 ; BUFFER_SCR[1]  ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; -0.011     ; 8.081      ;
+; -7.052 ; BUFFER_SCR[20] ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; -0.004     ; 8.088      ;
+; -7.036 ; BUFFER_SCR[18] ; STATUS.0001 ; CLK          ; CLK         ; 1.000        ; 0.018      ; 8.094      ;
+; -7.035 ; BUFFER_SCR[23] ; SCR1~reg0   ; CLK          ; CLK         ; 1.000        ; -0.004     ; 8.071      ;
+; -7.031 ; BUFFER_SCR[6]  ; SCR6~reg0   ; CLK          ; CLK         ; 1.000        ; 0.006      ; 8.077      ;
+; -7.028 ; BUFFER_SCR[5]  ; SCR2~reg0   ; CLK          ; CLK         ; 1.000        ; 0.003      ; 8.071      ;
+; -7.020 ; BUFFER_SCR[23] ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; -0.006     ; 8.054      ;
+; -7.018 ; BUFFER_SCR[16] ; ENABLE~reg0 ; CLK          ; CLK         ; 1.000        ; 0.015      ; 8.073      ;
+; -7.016 ; BUFFER_SCR[3]  ; SCR5~reg0   ; CLK          ; CLK         ; 1.000        ; -0.011     ; 8.045      ;
++--------+----------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                        ;
++-------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; 0.499 ; STATUS.0001    ; STATUS.0001    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; SCR4~reg0      ; SCR4~reg0      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; SCR5~reg0      ; SCR5~reg0      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.805      ;
+; 1.624 ; SCR6~reg0      ; SCR6~reg0      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.930      ;
+; 1.744 ; BUFFER_SCR[2]  ; BUFFER_SCR[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.050      ;
+; 1.755 ; SCR1~reg0      ; SCR1~reg0      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.061      ;
+; 1.879 ; SCR2~reg0      ; SCR2~reg0      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.185      ;
+; 1.978 ; BUFFER_SCR[19] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.284      ;
+; 2.016 ; ENABLE~reg0    ; ENABLE~reg0    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.322      ;
+; 2.950 ; BUFFER_SCR[1]  ; BUFFER_SCR[2]  ; CLK          ; CLK         ; 0.000        ; -0.004     ; 3.252      ;
+; 3.061 ; BUFFER_SCR[0]  ; BUFFER_SCR[2]  ; CLK          ; CLK         ; 0.000        ; 0.020      ; 3.387      ;
+; 3.093 ; BUFFER_SCR[2]  ; BUFFER_SCR[3]  ; CLK          ; CLK         ; 0.000        ; 0.004      ; 3.403      ;
+; 3.112 ; BUFFER_SCR[18] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.014      ; 3.432      ;
+; 3.181 ; BUFFER_SCR[19] ; BUFFER_SCR[21] ; CLK          ; CLK         ; 0.000        ; 0.005      ; 3.492      ;
+; 3.194 ; BUFFER_SCR[17] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.014      ; 3.514      ;
+; 3.210 ; BUFFER_SCR[18] ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.516      ;
+; 3.352 ; BUFFER_SCR[3]  ; BUFFER_SCR[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.658      ;
+; 3.354 ; BUFFER_SCR[17] ; BUFFER_SCR[17] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.660      ;
+; 3.397 ; STATUS.0001    ; BUFFER_SCR[2]  ; CLK          ; CLK         ; 0.000        ; 0.002      ; 3.705      ;
+; 3.579 ; BUFFER_SCR[21] ; BUFFER_SCR[21] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.885      ;
+; 3.620 ; BUFFER_SCR[2]  ; BUFFER_SCR[5]  ; CLK          ; CLK         ; 0.000        ; -0.008     ; 3.918      ;
+; 3.633 ; BUFFER_SCR[16] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.014      ; 3.953      ;
+; 3.643 ; SCR3~reg0      ; SCR3~reg0      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.949      ;
+; 3.657 ; BUFFER_SCR[0]  ; BUFFER_SCR[0]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.963      ;
+; 3.665 ; BUFFER_SCR[23] ; BUFFER_SCR[23] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.971      ;
+; 3.673 ; BUFFER_SCR[2]  ; BUFFER_SCR[4]  ; CLK          ; CLK         ; 0.000        ; 0.004      ; 3.983      ;
+; 3.681 ; BUFFER_SCR[20] ; BUFFER_SCR[21] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.987      ;
+; 3.685 ; BUFFER_SCR[17] ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 3.991      ;
+; 3.724 ; BUFFER_SCR[16] ; BUFFER_SCR[16] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.030      ;
+; 3.735 ; BUFFER_SCR[4]  ; BUFFER_SCR[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.041      ;
+; 3.773 ; BUFFER_SCR[2]  ; BUFFER_SCR[6]  ; CLK          ; CLK         ; 0.000        ; -0.008     ; 4.071      ;
+; 3.802 ; BUFFER_SCR[19] ; BUFFER_SCR[22] ; CLK          ; CLK         ; 0.000        ; 0.005      ; 4.113      ;
+; 3.817 ; BUFFER_SCR[22] ; BUFFER_SCR[22] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.123      ;
+; 3.831 ; BUFFER_SCR[15] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; -0.010     ; 4.127      ;
+; 3.906 ; BUFFER_SCR[1]  ; BUFFER_SCR[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.212      ;
+; 3.911 ; BUFFER_SCR[18] ; BUFFER_SCR[21] ; CLK          ; CLK         ; 0.000        ; 0.019      ; 4.236      ;
+; 3.920 ; BUFFER_SCR[1]  ; BUFFER_SCR[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.226      ;
+; 3.928 ; BUFFER_SCR[14] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; -0.010     ; 4.224      ;
+; 3.939 ; BUFFER_SCR[4]  ; SCR6~reg0      ; CLK          ; CLK         ; 0.000        ; -0.006     ; 4.239      ;
+; 3.963 ; BUFFER_SCR[2]  ; BUFFER_SCR[7]  ; CLK          ; CLK         ; 0.000        ; -0.008     ; 4.261      ;
+; 3.966 ; BUFFER_SCR[2]  ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; -0.006     ; 4.266      ;
+; 3.992 ; STATUS.0001    ; BUFFER_SCR[0]  ; CLK          ; CLK         ; 0.000        ; -0.018     ; 4.280      ;
+; 3.993 ; BUFFER_SCR[17] ; BUFFER_SCR[21] ; CLK          ; CLK         ; 0.000        ; 0.019      ; 4.318      ;
+; 4.006 ; BUFFER_SCR[13] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.002      ; 4.314      ;
+; 4.017 ; BUFFER_SCR[0]  ; BUFFER_SCR[3]  ; CLK          ; CLK         ; 0.000        ; 0.024      ; 4.347      ;
+; 4.032 ; BUFFER_SCR[15] ; BUFFER_SCR[15] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.338      ;
+; 4.052 ; BUFFER_SCR[4]  ; STATUS.0001    ; CLK          ; CLK         ; 0.000        ; -0.006     ; 4.352      ;
+; 4.052 ; BUFFER_SCR[17] ; SCR1~reg0      ; CLK          ; CLK         ; 0.000        ; 0.015      ; 4.373      ;
+; 4.054 ; BUFFER_SCR[5]  ; BUFFER_SCR[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.360      ;
+; 4.085 ; BUFFER_SCR[12] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; -0.010     ; 4.381      ;
+; 4.108 ; BUFFER_SCR[15] ; SCR3~reg0      ; CLK          ; CLK         ; 0.000        ; -0.005     ; 4.409      ;
+; 4.112 ; BUFFER_SCR[5]  ; STATUS.0001    ; CLK          ; CLK         ; 0.000        ; 0.006      ; 4.424      ;
+; 4.119 ; BUFFER_SCR[6]  ; BUFFER_SCR[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.425      ;
+; 4.121 ; BUFFER_SCR[4]  ; BUFFER_SCR[5]  ; CLK          ; CLK         ; 0.000        ; -0.012     ; 4.415      ;
+; 4.124 ; BUFFER_SCR[16] ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.430      ;
+; 4.184 ; BUFFER_SCR[11] ; BUFFER_SCR[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.490      ;
+; 4.186 ; BUFFER_SCR[16] ; BUFFER_SCR[17] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.492      ;
+; 4.232 ; BUFFER_SCR[11] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.009      ; 4.547      ;
+; 4.253 ; BUFFER_SCR[17] ; SCR5~reg0      ; CLK          ; CLK         ; 0.000        ; 0.013      ; 4.572      ;
+; 4.256 ; BUFFER_SCR[2]  ; BUFFER_SCR[8]  ; CLK          ; CLK         ; 0.000        ; -0.008     ; 4.554      ;
+; 4.274 ; BUFFER_SCR[4]  ; BUFFER_SCR[6]  ; CLK          ; CLK         ; 0.000        ; -0.012     ; 4.568      ;
+; 4.278 ; BUFFER_SCR[3]  ; BUFFER_SCR[5]  ; CLK          ; CLK         ; 0.000        ; -0.012     ; 4.572      ;
+; 4.301 ; BUFFER_SCR[19] ; BUFFER_SCR[23] ; CLK          ; CLK         ; 0.000        ; 0.005      ; 4.612      ;
+; 4.302 ; BUFFER_SCR[20] ; BUFFER_SCR[22] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.608      ;
+; 4.314 ; BUFFER_SCR[7]  ; BUFFER_SCR[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.620      ;
+; 4.315 ; BUFFER_SCR[15] ; BUFFER_SCR[16] ; CLK          ; CLK         ; 0.000        ; -0.024     ; 4.597      ;
+; 4.316 ; BUFFER_SCR[14] ; STATUS.0001    ; CLK          ; CLK         ; 0.000        ; -0.006     ; 4.616      ;
+; 4.322 ; BUFFER_SCR[15] ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; -0.024     ; 4.604      ;
+; 4.331 ; BUFFER_SCR[3]  ; BUFFER_SCR[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.637      ;
+; 4.331 ; BUFFER_SCR[2]  ; BUFFER_SCR[11] ; CLK          ; CLK         ; 0.000        ; -0.015     ; 4.622      ;
+; 4.353 ; STATUS.0001    ; BUFFER_SCR[3]  ; CLK          ; CLK         ; 0.000        ; 0.006      ; 4.665      ;
+; 4.356 ; BUFFER_SCR[2]  ; BUFFER_SCR[9]  ; CLK          ; CLK         ; 0.000        ; -0.008     ; 4.654      ;
+; 4.366 ; BUFFER_SCR[4]  ; ENABLE~reg0    ; CLK          ; CLK         ; 0.000        ; -0.009     ; 4.663      ;
+; 4.369 ; BUFFER_SCR[8]  ; BUFFER_SCR[8]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.675      ;
+; 4.370 ; BUFFER_SCR[15] ; SCR2~reg0      ; CLK          ; CLK         ; 0.000        ; -0.009     ; 4.667      ;
+; 4.379 ; BUFFER_SCR[10] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.002      ; 4.687      ;
+; 4.384 ; BUFFER_SCR[15] ; BUFFER_SCR[17] ; CLK          ; CLK         ; 0.000        ; -0.024     ; 4.666      ;
+; 4.395 ; BUFFER_SCR[12] ; BUFFER_SCR[12] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.701      ;
+; 4.397 ; BUFFER_SCR[9]  ; SCR2~reg0      ; CLK          ; CLK         ; 0.000        ; 0.003      ; 4.706      ;
+; 4.406 ; BUFFER_SCR[17] ; SCR6~reg0      ; CLK          ; CLK         ; 0.000        ; 0.018      ; 4.730      ;
+; 4.412 ; BUFFER_SCR[14] ; BUFFER_SCR[16] ; CLK          ; CLK         ; 0.000        ; -0.024     ; 4.694      ;
+; 4.419 ; BUFFER_SCR[14] ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; -0.024     ; 4.701      ;
+; 4.424 ; BUFFER_SCR[0]  ; BUFFER_SCR[1]  ; CLK          ; CLK         ; 0.000        ; 0.024      ; 4.754      ;
+; 4.426 ; BUFFER_SCR[5]  ; ENABLE~reg0    ; CLK          ; CLK         ; 0.000        ; 0.003      ; 4.735      ;
+; 4.428 ; BUFFER_SCR[9]  ; BUFFER_SCR[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.734      ;
+; 4.431 ; BUFFER_SCR[3]  ; BUFFER_SCR[6]  ; CLK          ; CLK         ; 0.000        ; -0.012     ; 4.725      ;
+; 4.431 ; BUFFER_SCR[9]  ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.002      ; 4.739      ;
+; 4.432 ; BUFFER_SCR[16] ; BUFFER_SCR[21] ; CLK          ; CLK         ; 0.000        ; 0.019      ; 4.757      ;
+; 4.433 ; BUFFER_SCR[12] ; SCR1~reg0      ; CLK          ; CLK         ; 0.000        ; -0.009     ; 4.730      ;
+; 4.433 ; BUFFER_SCR[1]  ; BUFFER_SCR[5]  ; CLK          ; CLK         ; 0.000        ; -0.012     ; 4.727      ;
+; 4.436 ; BUFFER_SCR[15] ; SCR6~reg0      ; CLK          ; CLK         ; 0.000        ; -0.006     ; 4.736      ;
+; 4.450 ; BUFFER_SCR[2]  ; BUFFER_SCR[16] ; CLK          ; CLK         ; 0.000        ; -0.020     ; 4.736      ;
+; 4.456 ; BUFFER_SCR[13] ; BUFFER_SCR[13] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.762      ;
+; 4.457 ; BUFFER_SCR[2]  ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; -0.020     ; 4.743      ;
+; 4.464 ; BUFFER_SCR[4]  ; BUFFER_SCR[7]  ; CLK          ; CLK         ; 0.000        ; -0.012     ; 4.758      ;
+; 4.467 ; BUFFER_SCR[4]  ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; -0.010     ; 4.763      ;
+; 4.481 ; BUFFER_SCR[14] ; BUFFER_SCR[17] ; CLK          ; CLK         ; 0.000        ; -0.024     ; 4.763      ;
+; 4.486 ; BUFFER_SCR[1]  ; BUFFER_SCR[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 4.792      ;
+; 4.490 ; BUFFER_SCR[13] ; BUFFER_SCR[16] ; CLK          ; CLK         ; 0.000        ; -0.012     ; 4.784      ;
+; 4.497 ; BUFFER_SCR[13] ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; -0.012     ; 4.791      ;
++-------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                               ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; CLK   ; Rise       ; CLK                ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[0]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[0]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[10]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[10]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[11]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[11]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[12]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[12]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[13]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[13]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[14]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[14]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[15]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[15]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[16]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[16]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[17]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[17]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[18]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[18]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[19]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[19]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[1]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[1]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[20]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[20]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[21]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[21]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[22]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[22]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[23]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[23]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[2]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[2]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[3]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[3]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[4]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[4]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[5]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[5]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[6]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[6]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[7]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[7]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[8]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[8]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[9]      ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[9]      ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; ENABLE~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; ENABLE~reg0        ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; SCR1~reg0          ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; SCR1~reg0          ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; SCR2~reg0          ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; SCR2~reg0          ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; SCR3~reg0          ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; SCR3~reg0          ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; SCR4~reg0          ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; SCR4~reg0          ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; SCR5~reg0          ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; SCR5~reg0          ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; SCR6~reg0          ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; SCR6~reg0          ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK   ; Rise       ; STATUS.0001        ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK   ; Rise       ; STATUS.0001        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[0]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[0]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[11]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[11]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[12]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[12]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[13]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[13]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[14]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[14]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[15]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[15]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[16]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[16]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[17]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[17]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[18]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[18]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[19]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[19]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[1]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[1]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[20]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[20]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[21]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[21]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[22]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[22]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[23]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[23]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[2]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[2]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[3]|clk  ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ctrl      ; CLK        ; 6.621 ; 6.621 ; Rise       ; CLK             ;
+; ctrl1     ; CLK        ; 9.745 ; 9.745 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ctrl      ; CLK        ; -5.135 ; -5.135 ; Rise       ; CLK             ;
+; ctrl1     ; CLK        ; -5.668 ; -5.668 ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ENABLE    ; CLK        ; 8.612  ; 8.612  ; Rise       ; CLK             ;
+; SCR1      ; CLK        ; 8.344  ; 8.344  ; Rise       ; CLK             ;
+; SCR2      ; CLK        ; 9.201  ; 9.201  ; Rise       ; CLK             ;
+; SCR3      ; CLK        ; 10.252 ; 10.252 ; Rise       ; CLK             ;
+; SCR4      ; CLK        ; 8.355  ; 8.355  ; Rise       ; CLK             ;
+; SCR5      ; CLK        ; 8.023  ; 8.023  ; Rise       ; CLK             ;
+; SCR6      ; CLK        ; 8.373  ; 8.373  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ENABLE    ; CLK        ; 8.612  ; 8.612  ; Rise       ; CLK             ;
+; SCR1      ; CLK        ; 8.344  ; 8.344  ; Rise       ; CLK             ;
+; SCR2      ; CLK        ; 9.201  ; 9.201  ; Rise       ; CLK             ;
+; SCR3      ; CLK        ; 10.252 ; 10.252 ; Rise       ; CLK             ;
+; SCR4      ; CLK        ; 8.355  ; 8.355  ; Rise       ; CLK             ;
+; SCR5      ; CLK        ; 8.023  ; 8.023  ; Rise       ; CLK             ;
+; SCR6      ; CLK        ; 8.373  ; 8.373  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -1.906 ; -37.044       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; -1.380 ; -33.380               ;
++-------+--------+-----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                                        ;
++--------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node      ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; -1.906 ; BUFFER_SCR[2]  ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; -0.005     ; 2.933      ;
+; -1.840 ; BUFFER_SCR[2]  ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; -0.007     ; 2.865      ;
+; -1.819 ; BUFFER_SCR[16] ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.866      ;
+; -1.793 ; BUFFER_SCR[16] ; SCR6~reg0      ; CLK          ; CLK         ; 1.000        ; 0.018      ; 2.843      ;
+; -1.791 ; BUFFER_SCR[2]  ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; -0.005     ; 2.818      ;
+; -1.774 ; BUFFER_SCR[2]  ; SCR3~reg0      ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.804      ;
+; -1.753 ; BUFFER_SCR[6]  ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.792      ;
+; -1.732 ; BUFFER_SCR[2]  ; SCR6~reg0      ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.762      ;
+; -1.722 ; BUFFER_SCR[18] ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.769      ;
+; -1.713 ; BUFFER_SCR[0]  ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.760      ;
+; -1.712 ; BUFFER_SCR[2]  ; ENABLE~reg0    ; CLK          ; CLK         ; 1.000        ; -0.005     ; 2.739      ;
+; -1.707 ; BUFFER_SCR[14] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.730      ;
+; -1.706 ; BUFFER_SCR[16] ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; 0.013      ; 2.751      ;
+; -1.704 ; BUFFER_SCR[14] ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.727      ;
+; -1.702 ; BUFFER_SCR[2]  ; STATUS.0001    ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.732      ;
+; -1.700 ; BUFFER_SCR[16] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.747      ;
+; -1.689 ; BUFFER_SCR[16] ; SCR3~reg0      ; CLK          ; CLK         ; 1.000        ; 0.018      ; 2.739      ;
+; -1.687 ; BUFFER_SCR[19] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.720      ;
+; -1.682 ; STATUS.0001    ; BUFFER_SCR[20] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.714      ;
+; -1.680 ; BUFFER_SCR[0]  ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.727      ;
+; -1.670 ; BUFFER_SCR[7]  ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.709      ;
+; -1.670 ; BUFFER_SCR[2]  ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; -0.005     ; 2.697      ;
+; -1.665 ; BUFFER_SCR[11] ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; 0.012      ; 2.709      ;
+; -1.663 ; BUFFER_SCR[18] ; SCR6~reg0      ; CLK          ; CLK         ; 1.000        ; 0.018      ; 2.713      ;
+; -1.663 ; BUFFER_SCR[3]  ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.686      ;
+; -1.661 ; BUFFER_SCR[9]  ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.700      ;
+; -1.659 ; BUFFER_SCR[10] ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.698      ;
+; -1.657 ; BUFFER_SCR[7]  ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.696      ;
+; -1.656 ; BUFFER_SCR[18] ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; 0.013      ; 2.701      ;
+; -1.654 ; BUFFER_SCR[0]  ; SCR6~reg0      ; CLK          ; CLK         ; 1.000        ; 0.018      ; 2.704      ;
+; -1.650 ; BUFFER_SCR[17] ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.697      ;
+; -1.650 ; BUFFER_SCR[3]  ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.673      ;
+; -1.649 ; BUFFER_SCR[13] ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.688      ;
+; -1.643 ; BUFFER_SCR[18] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.690      ;
+; -1.634 ; BUFFER_SCR[23] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; -0.003     ; 2.663      ;
+; -1.626 ; BUFFER_SCR[14] ; SCR6~reg0      ; CLK          ; CLK         ; 1.000        ; -0.006     ; 2.652      ;
+; -1.624 ; BUFFER_SCR[17] ; SCR6~reg0      ; CLK          ; CLK         ; 1.000        ; 0.018      ; 2.674      ;
+; -1.622 ; BUFFER_SCR[4]  ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.645      ;
+; -1.622 ; BUFFER_SCR[22] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; -0.003     ; 2.651      ;
+; -1.621 ; BUFFER_SCR[23] ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; -0.003     ; 2.650      ;
+; -1.618 ; BUFFER_SCR[6]  ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.657      ;
+; -1.613 ; BUFFER_SCR[4]  ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.636      ;
+; -1.611 ; BUFFER_SCR[11] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; 0.012      ; 2.655      ;
+; -1.611 ; BUFFER_SCR[12] ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.634      ;
+; -1.609 ; BUFFER_SCR[22] ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; -0.003     ; 2.638      ;
+; -1.608 ; BUFFER_SCR[19] ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.641      ;
+; -1.606 ; BUFFER_SCR[14] ; ENABLE~reg0    ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.629      ;
+; -1.602 ; BUFFER_SCR[11] ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; 0.012      ; 2.646      ;
+; -1.599 ; BUFFER_SCR[5]  ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.638      ;
+; -1.596 ; BUFFER_SCR[14] ; STATUS.0001    ; CLK          ; CLK         ; 1.000        ; -0.006     ; 2.622      ;
+; -1.593 ; BUFFER_SCR[10] ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; 0.005      ; 2.630      ;
+; -1.591 ; BUFFER_SCR[7]  ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; 0.005      ; 2.628      ;
+; -1.591 ; BUFFER_SCR[16] ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.638      ;
+; -1.591 ; BUFFER_SCR[1]  ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.614      ;
+; -1.591 ; BUFFER_SCR[5]  ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.630      ;
+; -1.590 ; BUFFER_SCR[18] ; SCR3~reg0      ; CLK          ; CLK         ; 1.000        ; 0.018      ; 2.640      ;
+; -1.586 ; BUFFER_SCR[0]  ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; 0.013      ; 2.631      ;
+; -1.584 ; STATUS.0001    ; BUFFER_SCR[23] ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.616      ;
+; -1.584 ; BUFFER_SCR[3]  ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; -0.011     ; 2.605      ;
+; -1.583 ; BUFFER_SCR[13] ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; 0.005      ; 2.620      ;
+; -1.578 ; BUFFER_SCR[1]  ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.601      ;
+; -1.573 ; BUFFER_SCR[19] ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; 0.001      ; 2.606      ;
+; -1.572 ; BUFFER_SCR[12] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.595      ;
+; -1.572 ; BUFFER_SCR[13] ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.611      ;
+; -1.572 ; BUFFER_SCR[6]  ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.611      ;
+; -1.568 ; BUFFER_SCR[13] ; SCR6~reg0      ; CLK          ; CLK         ; 1.000        ; 0.010      ; 2.610      ;
+; -1.568 ; BUFFER_SCR[14] ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.591      ;
+; -1.565 ; BUFFER_SCR[0]  ; BUFFER_SCR[20] ; CLK          ; CLK         ; 1.000        ; 0.018      ; 2.615      ;
+; -1.563 ; BUFFER_SCR[15] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; -0.008     ; 2.587      ;
+; -1.563 ; BUFFER_SCR[12] ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.586      ;
+; -1.563 ; BUFFER_SCR[10] ; SCR6~reg0      ; CLK          ; CLK         ; 1.000        ; 0.010      ; 2.605      ;
+; -1.561 ; BUFFER_SCR[18] ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.608      ;
+; -1.561 ; BUFFER_SCR[13] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.600      ;
+; -1.560 ; BUFFER_SCR[7]  ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.599      ;
+; -1.557 ; BUFFER_SCR[16] ; STATUS.0001    ; CLK          ; CLK         ; 1.000        ; 0.018      ; 2.607      ;
+; -1.556 ; BUFFER_SCR[21] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; -0.003     ; 2.585      ;
+; -1.555 ; BUFFER_SCR[23] ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; -0.005     ; 2.582      ;
+; -1.553 ; BUFFER_SCR[3]  ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; -0.009     ; 2.576      ;
+; -1.552 ; BUFFER_SCR[11] ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; 0.010      ; 2.594      ;
+; -1.550 ; BUFFER_SCR[0]  ; SCR3~reg0      ; CLK          ; CLK         ; 1.000        ; 0.018      ; 2.600      ;
+; -1.549 ; BUFFER_SCR[15] ; SCR6~reg0      ; CLK          ; CLK         ; 1.000        ; -0.005     ; 2.576      ;
+; -1.548 ; BUFFER_SCR[9]  ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; 0.005      ; 2.585      ;
+; -1.547 ; BUFFER_SCR[1]  ; BUFFER_SCR[20] ; CLK          ; CLK         ; 1.000        ; -0.006     ; 2.573      ;
+; -1.544 ; BUFFER_SCR[10] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.583      ;
+; -1.543 ; BUFFER_SCR[21] ; SCR4~reg0      ; CLK          ; CLK         ; 1.000        ; -0.003     ; 2.572      ;
+; -1.543 ; BUFFER_SCR[22] ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; -0.005     ; 2.570      ;
+; -1.542 ; BUFFER_SCR[9]  ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.581      ;
+; -1.540 ; BUFFER_SCR[6]  ; SCR6~reg0      ; CLK          ; CLK         ; 1.000        ; 0.010      ; 2.582      ;
+; -1.537 ; BUFFER_SCR[17] ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; 0.013      ; 2.582      ;
+; -1.535 ; BUFFER_SCR[11] ; SCR3~reg0      ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.582      ;
+; -1.535 ; BUFFER_SCR[4]  ; SCR6~reg0      ; CLK          ; CLK         ; 1.000        ; -0.006     ; 2.561      ;
+; -1.535 ; BUFFER_SCR[0]  ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.582      ;
+; -1.534 ; BUFFER_SCR[16] ; ENABLE~reg0    ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.581      ;
+; -1.533 ; BUFFER_SCR[5]  ; SCR5~reg0      ; CLK          ; CLK         ; 1.000        ; 0.005      ; 2.570      ;
+; -1.532 ; BUFFER_SCR[8]  ; SCR1~reg0      ; CLK          ; CLK         ; 1.000        ; 0.007      ; 2.571      ;
+; -1.531 ; BUFFER_SCR[17] ; SCR2~reg0      ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.578      ;
+; -1.531 ; BUFFER_SCR[9]  ; SCR3~reg0      ; CLK          ; CLK         ; 1.000        ; 0.010      ; 2.573      ;
+; -1.528 ; BUFFER_SCR[18] ; ENABLE~reg0    ; CLK          ; CLK         ; 1.000        ; 0.015      ; 2.575      ;
+; -1.528 ; BUFFER_SCR[5]  ; BUFFER_SCR[20] ; CLK          ; CLK         ; 1.000        ; 0.010      ; 2.570      ;
+; -1.527 ; BUFFER_SCR[10] ; SCR3~reg0      ; CLK          ; CLK         ; 1.000        ; 0.010      ; 2.569      ;
++--------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                        ;
++-------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node      ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; STATUS.0001    ; STATUS.0001    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; SCR4~reg0      ; SCR4~reg0      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; SCR5~reg0      ; SCR5~reg0      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.492 ; SCR6~reg0      ; SCR6~reg0      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.644      ;
+; 0.524 ; BUFFER_SCR[2]  ; BUFFER_SCR[2]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.676      ;
+; 0.535 ; SCR1~reg0      ; SCR1~reg0      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.687      ;
+; 0.587 ; SCR2~reg0      ; SCR2~reg0      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.739      ;
+; 0.620 ; BUFFER_SCR[19] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.772      ;
+; 0.647 ; ENABLE~reg0    ; ENABLE~reg0    ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.799      ;
+; 0.896 ; BUFFER_SCR[1]  ; BUFFER_SCR[2]  ; CLK          ; CLK         ; 0.000        ; -0.004     ; 1.044      ;
+; 0.914 ; BUFFER_SCR[0]  ; BUFFER_SCR[2]  ; CLK          ; CLK         ; 0.000        ; 0.020      ; 1.086      ;
+; 0.947 ; BUFFER_SCR[2]  ; BUFFER_SCR[3]  ; CLK          ; CLK         ; 0.000        ; 0.004      ; 1.103      ;
+; 0.949 ; BUFFER_SCR[18] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.014      ; 1.115      ;
+; 0.969 ; BUFFER_SCR[18] ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.121      ;
+; 0.980 ; BUFFER_SCR[19] ; BUFFER_SCR[21] ; CLK          ; CLK         ; 0.000        ; 0.004      ; 1.136      ;
+; 0.981 ; BUFFER_SCR[17] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.014      ; 1.147      ;
+; 1.031 ; BUFFER_SCR[17] ; BUFFER_SCR[17] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.183      ;
+; 1.031 ; STATUS.0001    ; BUFFER_SCR[2]  ; CLK          ; CLK         ; 0.000        ; 0.002      ; 1.185      ;
+; 1.045 ; BUFFER_SCR[3]  ; BUFFER_SCR[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.197      ;
+; 1.087 ; BUFFER_SCR[21] ; BUFFER_SCR[21] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.239      ;
+; 1.101 ; BUFFER_SCR[0]  ; BUFFER_SCR[0]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.253      ;
+; 1.104 ; BUFFER_SCR[17] ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.256      ;
+; 1.106 ; BUFFER_SCR[20] ; BUFFER_SCR[21] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.258      ;
+; 1.114 ; BUFFER_SCR[16] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.014      ; 1.280      ;
+; 1.133 ; BUFFER_SCR[2]  ; BUFFER_SCR[4]  ; CLK          ; CLK         ; 0.000        ; 0.004      ; 1.289      ;
+; 1.139 ; BUFFER_SCR[16] ; BUFFER_SCR[16] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.291      ;
+; 1.148 ; BUFFER_SCR[23] ; BUFFER_SCR[23] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.300      ;
+; 1.154 ; BUFFER_SCR[2]  ; BUFFER_SCR[5]  ; CLK          ; CLK         ; 0.000        ; -0.012     ; 1.294      ;
+; 1.163 ; BUFFER_SCR[4]  ; BUFFER_SCR[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.315      ;
+; 1.177 ; BUFFER_SCR[1]  ; BUFFER_SCR[1]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.329      ;
+; 1.197 ; BUFFER_SCR[19] ; BUFFER_SCR[22] ; CLK          ; CLK         ; 0.000        ; 0.004      ; 1.353      ;
+; 1.199 ; BUFFER_SCR[22] ; BUFFER_SCR[22] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.351      ;
+; 1.205 ; SCR3~reg0      ; SCR3~reg0      ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.357      ;
+; 1.209 ; BUFFER_SCR[18] ; BUFFER_SCR[21] ; CLK          ; CLK         ; 0.000        ; 0.018      ; 1.379      ;
+; 1.210 ; BUFFER_SCR[15] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; -0.009     ; 1.353      ;
+; 1.216 ; BUFFER_SCR[1]  ; BUFFER_SCR[3]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.368      ;
+; 1.221 ; BUFFER_SCR[17] ; SCR1~reg0      ; CLK          ; CLK         ; 0.000        ; 0.015      ; 1.388      ;
+; 1.223 ; STATUS.0001    ; BUFFER_SCR[0]  ; CLK          ; CLK         ; 0.000        ; -0.018     ; 1.357      ;
+; 1.224 ; BUFFER_SCR[15] ; BUFFER_SCR[15] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.376      ;
+; 1.226 ; BUFFER_SCR[2]  ; BUFFER_SCR[6]  ; CLK          ; CLK         ; 0.000        ; -0.012     ; 1.366      ;
+; 1.234 ; BUFFER_SCR[0]  ; BUFFER_SCR[3]  ; CLK          ; CLK         ; 0.000        ; 0.024      ; 1.410      ;
+; 1.237 ; BUFFER_SCR[16] ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.389      ;
+; 1.241 ; BUFFER_SCR[17] ; BUFFER_SCR[21] ; CLK          ; CLK         ; 0.000        ; 0.018      ; 1.411      ;
+; 1.242 ; BUFFER_SCR[4]  ; STATUS.0001    ; CLK          ; CLK         ; 0.000        ; -0.006     ; 1.388      ;
+; 1.259 ; BUFFER_SCR[4]  ; SCR6~reg0      ; CLK          ; CLK         ; 0.000        ; -0.006     ; 1.405      ;
+; 1.262 ; BUFFER_SCR[15] ; SCR3~reg0      ; CLK          ; CLK         ; 0.000        ; -0.005     ; 1.409      ;
+; 1.266 ; BUFFER_SCR[14] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; -0.010     ; 1.408      ;
+; 1.267 ; BUFFER_SCR[16] ; BUFFER_SCR[17] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.419      ;
+; 1.274 ; BUFFER_SCR[2]  ; BUFFER_SCR[7]  ; CLK          ; CLK         ; 0.000        ; -0.012     ; 1.414      ;
+; 1.281 ; BUFFER_SCR[17] ; SCR5~reg0      ; CLK          ; CLK         ; 0.000        ; 0.013      ; 1.446      ;
+; 1.287 ; BUFFER_SCR[4]  ; BUFFER_SCR[5]  ; CLK          ; CLK         ; 0.000        ; -0.016     ; 1.423      ;
+; 1.287 ; BUFFER_SCR[13] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.006      ; 1.445      ;
+; 1.298 ; BUFFER_SCR[0]  ; BUFFER_SCR[1]  ; CLK          ; CLK         ; 0.000        ; 0.024      ; 1.474      ;
+; 1.299 ; BUFFER_SCR[5]  ; BUFFER_SCR[5]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.451      ;
+; 1.312 ; BUFFER_SCR[5]  ; STATUS.0001    ; CLK          ; CLK         ; 0.000        ; 0.010      ; 1.474      ;
+; 1.323 ; BUFFER_SCR[20] ; BUFFER_SCR[22] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.475      ;
+; 1.329 ; BUFFER_SCR[12] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; -0.010     ; 1.471      ;
+; 1.330 ; BUFFER_SCR[3]  ; BUFFER_SCR[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.331 ; BUFFER_SCR[14] ; STATUS.0001    ; CLK          ; CLK         ; 0.000        ; -0.006     ; 1.477      ;
+; 1.333 ; BUFFER_SCR[15] ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; -0.023     ; 1.462      ;
+; 1.338 ; BUFFER_SCR[15] ; SCR2~reg0      ; CLK          ; CLK         ; 0.000        ; -0.008     ; 1.482      ;
+; 1.338 ; BUFFER_SCR[15] ; BUFFER_SCR[16] ; CLK          ; CLK         ; 0.000        ; -0.023     ; 1.467      ;
+; 1.348 ; BUFFER_SCR[6]  ; BUFFER_SCR[6]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.500      ;
+; 1.350 ; BUFFER_SCR[11] ; BUFFER_SCR[11] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.502      ;
+; 1.350 ; BUFFER_SCR[12] ; BUFFER_SCR[12] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.502      ;
+; 1.351 ; BUFFER_SCR[3]  ; BUFFER_SCR[5]  ; CLK          ; CLK         ; 0.000        ; -0.016     ; 1.487      ;
+; 1.351 ; STATUS.0001    ; BUFFER_SCR[3]  ; CLK          ; CLK         ; 0.000        ; 0.006      ; 1.509      ;
+; 1.359 ; BUFFER_SCR[4]  ; BUFFER_SCR[6]  ; CLK          ; CLK         ; 0.000        ; -0.016     ; 1.495      ;
+; 1.360 ; BUFFER_SCR[17] ; SCR4~reg0      ; CLK          ; CLK         ; 0.000        ; 0.015      ; 1.527      ;
+; 1.363 ; BUFFER_SCR[15] ; BUFFER_SCR[17] ; CLK          ; CLK         ; 0.000        ; -0.023     ; 1.492      ;
+; 1.364 ; BUFFER_SCR[17] ; SCR6~reg0      ; CLK          ; CLK         ; 0.000        ; 0.018      ; 1.534      ;
+; 1.366 ; BUFFER_SCR[19] ; BUFFER_SCR[23] ; CLK          ; CLK         ; 0.000        ; 0.004      ; 1.522      ;
+; 1.369 ; BUFFER_SCR[15] ; SCR6~reg0      ; CLK          ; CLK         ; 0.000        ; -0.005     ; 1.516      ;
+; 1.374 ; BUFFER_SCR[16] ; BUFFER_SCR[21] ; CLK          ; CLK         ; 0.000        ; 0.018      ; 1.544      ;
+; 1.376 ; BUFFER_SCR[12] ; SCR1~reg0      ; CLK          ; CLK         ; 0.000        ; -0.009     ; 1.519      ;
+; 1.379 ; BUFFER_SCR[5]  ; SCR3~reg0      ; CLK          ; CLK         ; 0.000        ; 0.010      ; 1.541      ;
+; 1.381 ; BUFFER_SCR[4]  ; ENABLE~reg0    ; CLK          ; CLK         ; 0.000        ; -0.009     ; 1.524      ;
+; 1.382 ; BUFFER_SCR[7]  ; BUFFER_SCR[7]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.534      ;
+; 1.384 ; BUFFER_SCR[13] ; BUFFER_SCR[13] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.536      ;
+; 1.385 ; BUFFER_SCR[14] ; BUFFER_SCR[15] ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.536      ;
+; 1.387 ; BUFFER_SCR[9]  ; BUFFER_SCR[9]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.539      ;
+; 1.389 ; BUFFER_SCR[14] ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; -0.024     ; 1.517      ;
+; 1.394 ; BUFFER_SCR[2]  ; BUFFER_SCR[8]  ; CLK          ; CLK         ; 0.000        ; -0.012     ; 1.534      ;
+; 1.394 ; BUFFER_SCR[14] ; BUFFER_SCR[16] ; CLK          ; CLK         ; 0.000        ; -0.024     ; 1.522      ;
+; 1.397 ; BUFFER_SCR[9]  ; SCR2~reg0      ; CLK          ; CLK         ; 0.000        ; 0.007      ; 1.556      ;
+; 1.400 ; BUFFER_SCR[11] ; SCR1~reg0      ; CLK          ; CLK         ; 0.000        ; 0.012      ; 1.564      ;
+; 1.402 ; BUFFER_SCR[1]  ; BUFFER_SCR[4]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.554      ;
+; 1.402 ; BUFFER_SCR[9]  ; SCR3~reg0      ; CLK          ; CLK         ; 0.000        ; 0.010      ; 1.564      ;
+; 1.402 ; BUFFER_SCR[8]  ; BUFFER_SCR[8]  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.554      ;
+; 1.404 ; BUFFER_SCR[11] ; SCR3~reg0      ; CLK          ; CLK         ; 0.000        ; 0.015      ; 1.571      ;
+; 1.406 ; BUFFER_SCR[13] ; BUFFER_SCR[15] ; CLK          ; CLK         ; 0.000        ; 0.015      ; 1.573      ;
+; 1.407 ; BUFFER_SCR[4]  ; BUFFER_SCR[7]  ; CLK          ; CLK         ; 0.000        ; -0.016     ; 1.543      ;
+; 1.409 ; BUFFER_SCR[21] ; BUFFER_SCR[22] ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.561      ;
+; 1.410 ; BUFFER_SCR[13] ; BUFFER_SCR[18] ; CLK          ; CLK         ; 0.000        ; -0.008     ; 1.554      ;
+; 1.413 ; BUFFER_SCR[11] ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; 0.011      ; 1.576      ;
+; 1.414 ; BUFFER_SCR[2]  ; BUFFER_SCR[19] ; CLK          ; CLK         ; 0.000        ; -0.006     ; 1.560      ;
+; 1.415 ; STATUS.0001    ; BUFFER_SCR[1]  ; CLK          ; CLK         ; 0.000        ; 0.006      ; 1.573      ;
+; 1.415 ; BUFFER_SCR[13] ; BUFFER_SCR[16] ; CLK          ; CLK         ; 0.000        ; -0.008     ; 1.559      ;
+; 1.416 ; BUFFER_SCR[2]  ; BUFFER_SCR[9]  ; CLK          ; CLK         ; 0.000        ; -0.012     ; 1.556      ;
+; 1.419 ; BUFFER_SCR[14] ; BUFFER_SCR[17] ; CLK          ; CLK         ; 0.000        ; -0.024     ; 1.547      ;
++-------+----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                               ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[0]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[10]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[11]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[12]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[13]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[14]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[15]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[16]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[16]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[17]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[17]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[18]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[18]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[19]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[19]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[1]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[20]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[20]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[21]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[21]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[22]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[22]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[23]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[23]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[2]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[3]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[4]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[5]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[6]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[7]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[8]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[9]      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; ENABLE~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; ENABLE~reg0        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; SCR1~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; SCR1~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; SCR2~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; SCR2~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; SCR3~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; SCR3~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; SCR4~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; SCR4~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; SCR5~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; SCR5~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; SCR6~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; SCR6~reg0          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; STATUS.0001        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; STATUS.0001        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[0]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[0]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[10]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[11]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[11]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[12]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[12]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[13]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[13]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[14]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[14]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[15]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[15]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[16]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[16]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[17]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[17]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[18]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[18]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[19]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[19]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[1]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[1]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[20]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[20]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[21]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[21]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[22]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[22]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[23]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[23]|clk ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[2]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; BUFFER_SCR[2]|clk  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; BUFFER_SCR[3]|clk  ;
++--------+--------------+----------------+------------------+-------+------------+--------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ctrl      ; CLK        ; 2.860 ; 2.860 ; Rise       ; CLK             ;
+; ctrl1     ; CLK        ; 3.747 ; 3.747 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ctrl      ; CLK        ; -2.306 ; -2.306 ; Rise       ; CLK             ;
+; ctrl1     ; CLK        ; -2.533 ; -2.533 ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ENABLE    ; CLK        ; 3.792 ; 3.792 ; Rise       ; CLK             ;
+; SCR1      ; CLK        ; 3.780 ; 3.780 ; Rise       ; CLK             ;
+; SCR2      ; CLK        ; 4.080 ; 4.080 ; Rise       ; CLK             ;
+; SCR3      ; CLK        ; 4.497 ; 4.497 ; Rise       ; CLK             ;
+; SCR4      ; CLK        ; 3.782 ; 3.782 ; Rise       ; CLK             ;
+; SCR5      ; CLK        ; 3.686 ; 3.686 ; Rise       ; CLK             ;
+; SCR6      ; CLK        ; 3.795 ; 3.795 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ENABLE    ; CLK        ; 3.792 ; 3.792 ; Rise       ; CLK             ;
+; SCR1      ; CLK        ; 3.780 ; 3.780 ; Rise       ; CLK             ;
+; SCR2      ; CLK        ; 4.080 ; 4.080 ; Rise       ; CLK             ;
+; SCR3      ; CLK        ; 4.497 ; 4.497 ; Rise       ; CLK             ;
+; SCR4      ; CLK        ; 3.782 ; 3.782 ; Rise       ; CLK             ;
+; SCR5      ; CLK        ; 3.686 ; 3.686 ; Rise       ; CLK             ;
+; SCR6      ; CLK        ; 3.795 ; 3.795 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -8.193   ; 0.215 ; N/A      ; N/A     ; -1.941              ;
+;  CLK             ; -8.193   ; 0.215 ; N/A      ; N/A     ; -1.941              ;
+; Design-wide TNS  ; -177.781 ; 0.0   ; 0.0      ; 0.0     ; -49.429             ;
+;  CLK             ; -177.781 ; 0.000 ; N/A      ; N/A     ; -49.429             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ctrl      ; CLK        ; 6.621 ; 6.621 ; Rise       ; CLK             ;
+; ctrl1     ; CLK        ; 9.745 ; 9.745 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ctrl      ; CLK        ; -2.306 ; -2.306 ; Rise       ; CLK             ;
+; ctrl1     ; CLK        ; -2.533 ; -2.533 ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; ENABLE    ; CLK        ; 8.612  ; 8.612  ; Rise       ; CLK             ;
+; SCR1      ; CLK        ; 8.344  ; 8.344  ; Rise       ; CLK             ;
+; SCR2      ; CLK        ; 9.201  ; 9.201  ; Rise       ; CLK             ;
+; SCR3      ; CLK        ; 10.252 ; 10.252 ; Rise       ; CLK             ;
+; SCR4      ; CLK        ; 8.355  ; 8.355  ; Rise       ; CLK             ;
+; SCR5      ; CLK        ; 8.023  ; 8.023  ; Rise       ; CLK             ;
+; SCR6      ; CLK        ; 8.373  ; 8.373  ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; ENABLE    ; CLK        ; 3.792 ; 3.792 ; Rise       ; CLK             ;
+; SCR1      ; CLK        ; 3.780 ; 3.780 ; Rise       ; CLK             ;
+; SCR2      ; CLK        ; 4.080 ; 4.080 ; Rise       ; CLK             ;
+; SCR3      ; CLK        ; 4.497 ; 4.497 ; Rise       ; CLK             ;
+; SCR4      ; CLK        ; 3.782 ; 3.782 ; Rise       ; CLK             ;
+; SCR5      ; CLK        ; 3.686 ; 3.686 ; Rise       ; CLK             ;
+; SCR6      ; CLK        ; 3.795 ; 3.795 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 3793     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 3793     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 32    ; 32   ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 7     ; 7    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 11.0 Build 157 04/27/2011 SJ Full Version
+    Info: Processing started: Wed Jul 18 09:41:14 2018
+Info: Command: quartus_sta SCR -c SCR
+Info: qsta_default_script.tcl version: #1
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Critical Warning: Synopsys Design Constraints File file not found: 'SCR.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name CLK CLK
+Info: Analyzing Slow Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -8.193
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -8.193      -177.781 CLK 
+Info: Worst-case hold slack is 0.499
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.499         0.000 CLK 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.941
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.941       -49.429 CLK 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info: Started post-fitting delay annotation
+Warning: Found 18 output pins without output pin load capacitance assignment
+    Info: Pin "XD0" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "XD1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "XD2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "XD3" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "XD4" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "XD5" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "XD6" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "XD7" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "SCR1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "SCR2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "SCR3" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "SCR4" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "SCR5" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "SCR6" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "ENABLE" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "TRIP1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "TRIP2" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+    Info: Pin "INT1" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -1.906
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.906       -37.044 CLK 
+Info: Worst-case hold slack is 0.215
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.215         0.000 CLK 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -1.380
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.380       -33.380 CLK 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 344 megabytes
+    Info: Processing ended: Wed Jul 18 09:41:17 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

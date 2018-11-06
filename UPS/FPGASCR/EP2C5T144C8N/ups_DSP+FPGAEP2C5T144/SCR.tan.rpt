@@ -1,0 +1,469 @@
+Classic Timing Analyzer report for SCR
+Wed Mar 19 15:52:41 2014
+Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'CLK'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                        ;
++------------------------------+-------+---------------+----------------------------------+---------------+---------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From          ; To            ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------+---------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 8.438 ns                         ; ctrl          ; BUFFER_SCR[8] ; --         ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 9.294 ns                         ; SCR6~reg0     ; SCR6          ; CLK        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -5.320 ns                        ; ctrl          ; SCR6~reg0     ; --         ; CLK      ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; 113.52 MHz ( period = 8.809 ns ) ; BUFFER_SCR[0] ; STATUS.1001   ; CLK        ; CLK      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;               ;               ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------+---------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C5T144C8        ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK'                                                                                                                                                                                                                          ;
++-----------------------------------------+-----------------------------------------------------+----------------+----------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From           ; To             ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+----------------+----------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 113.52 MHz ( period = 8.809 ns )                    ; BUFFER_SCR[0]  ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 8.553 ns                ;
+; N/A                                     ; 113.52 MHz ( period = 8.809 ns )                    ; BUFFER_SCR[0]  ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 8.553 ns                ;
+; N/A                                     ; 113.57 MHz ( period = 8.805 ns )                    ; BUFFER_SCR[0]  ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 8.549 ns                ;
+; N/A                                     ; 113.58 MHz ( period = 8.804 ns )                    ; BUFFER_SCR[0]  ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 8.548 ns                ;
+; N/A                                     ; 113.62 MHz ( period = 8.801 ns )                    ; BUFFER_SCR[0]  ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 8.545 ns                ;
+; N/A                                     ; 113.66 MHz ( period = 8.798 ns )                    ; BUFFER_SCR[0]  ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 8.542 ns                ;
+; N/A                                     ; 113.92 MHz ( period = 8.778 ns )                    ; BUFFER_SCR[0]  ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 8.523 ns                ;
+; N/A                                     ; 113.93 MHz ( period = 8.777 ns )                    ; BUFFER_SCR[0]  ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 8.522 ns                ;
+; N/A                                     ; 113.93 MHz ( period = 8.777 ns )                    ; BUFFER_SCR[0]  ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 8.522 ns                ;
+; N/A                                     ; 114.03 MHz ( period = 8.770 ns )                    ; BUFFER_SCR[0]  ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 8.515 ns                ;
+; N/A                                     ; 114.72 MHz ( period = 8.717 ns )                    ; BUFFER_SCR[17] ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 8.465 ns                ;
+; N/A                                     ; 114.72 MHz ( period = 8.717 ns )                    ; BUFFER_SCR[17] ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 8.465 ns                ;
+; N/A                                     ; 114.77 MHz ( period = 8.713 ns )                    ; BUFFER_SCR[17] ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 8.461 ns                ;
+; N/A                                     ; 114.78 MHz ( period = 8.712 ns )                    ; BUFFER_SCR[17] ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 8.460 ns                ;
+; N/A                                     ; 114.82 MHz ( period = 8.709 ns )                    ; BUFFER_SCR[17] ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 8.457 ns                ;
+; N/A                                     ; 114.86 MHz ( period = 8.706 ns )                    ; BUFFER_SCR[17] ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 8.454 ns                ;
+; N/A                                     ; 115.13 MHz ( period = 8.686 ns )                    ; BUFFER_SCR[17] ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 8.435 ns                ;
+; N/A                                     ; 115.14 MHz ( period = 8.685 ns )                    ; BUFFER_SCR[17] ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 8.434 ns                ;
+; N/A                                     ; 115.14 MHz ( period = 8.685 ns )                    ; BUFFER_SCR[17] ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 8.434 ns                ;
+; N/A                                     ; 115.17 MHz ( period = 8.683 ns )                    ; BUFFER_SCR[11] ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 8.431 ns                ;
+; N/A                                     ; 115.17 MHz ( period = 8.683 ns )                    ; BUFFER_SCR[11] ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 8.431 ns                ;
+; N/A                                     ; 115.22 MHz ( period = 8.679 ns )                    ; BUFFER_SCR[11] ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 8.427 ns                ;
+; N/A                                     ; 115.23 MHz ( period = 8.678 ns )                    ; BUFFER_SCR[11] ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 8.426 ns                ;
+; N/A                                     ; 115.23 MHz ( period = 8.678 ns )                    ; BUFFER_SCR[17] ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 8.427 ns                ;
+; N/A                                     ; 115.27 MHz ( period = 8.675 ns )                    ; BUFFER_SCR[11] ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 8.423 ns                ;
+; N/A                                     ; 115.31 MHz ( period = 8.672 ns )                    ; BUFFER_SCR[11] ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 8.420 ns                ;
+; N/A                                     ; 115.58 MHz ( period = 8.652 ns )                    ; BUFFER_SCR[11] ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 8.401 ns                ;
+; N/A                                     ; 115.59 MHz ( period = 8.651 ns )                    ; BUFFER_SCR[11] ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 8.400 ns                ;
+; N/A                                     ; 115.59 MHz ( period = 8.651 ns )                    ; BUFFER_SCR[11] ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 8.400 ns                ;
+; N/A                                     ; 115.69 MHz ( period = 8.644 ns )                    ; BUFFER_SCR[11] ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 8.393 ns                ;
+; N/A                                     ; 115.78 MHz ( period = 8.637 ns )                    ; BUFFER_SCR[1]  ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 8.381 ns                ;
+; N/A                                     ; 115.78 MHz ( period = 8.637 ns )                    ; BUFFER_SCR[1]  ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 8.381 ns                ;
+; N/A                                     ; 115.83 MHz ( period = 8.633 ns )                    ; BUFFER_SCR[1]  ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 8.377 ns                ;
+; N/A                                     ; 115.85 MHz ( period = 8.632 ns )                    ; BUFFER_SCR[1]  ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 8.376 ns                ;
+; N/A                                     ; 115.89 MHz ( period = 8.629 ns )                    ; BUFFER_SCR[1]  ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 8.373 ns                ;
+; N/A                                     ; 115.93 MHz ( period = 8.626 ns )                    ; BUFFER_SCR[1]  ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 8.370 ns                ;
+; N/A                                     ; 116.20 MHz ( period = 8.606 ns )                    ; BUFFER_SCR[0]  ; STATUS.0001    ; CLK        ; CLK      ; None                        ; None                      ; 8.337 ns                ;
+; N/A                                     ; 116.20 MHz ( period = 8.606 ns )                    ; BUFFER_SCR[1]  ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 8.351 ns                ;
+; N/A                                     ; 116.20 MHz ( period = 8.606 ns )                    ; BUFFER_SCR[0]  ; STATUS.1100    ; CLK        ; CLK      ; None                        ; None                      ; 8.337 ns                ;
+; N/A                                     ; 116.21 MHz ( period = 8.605 ns )                    ; BUFFER_SCR[1]  ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 8.350 ns                ;
+; N/A                                     ; 116.21 MHz ( period = 8.605 ns )                    ; BUFFER_SCR[1]  ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 8.350 ns                ;
+; N/A                                     ; 116.31 MHz ( period = 8.598 ns )                    ; BUFFER_SCR[1]  ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 8.343 ns                ;
+; N/A                                     ; 117.07 MHz ( period = 8.542 ns )                    ; BUFFER_SCR[3]  ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 8.286 ns                ;
+; N/A                                     ; 117.07 MHz ( period = 8.542 ns )                    ; BUFFER_SCR[3]  ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 8.286 ns                ;
+; N/A                                     ; 117.12 MHz ( period = 8.538 ns )                    ; BUFFER_SCR[3]  ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 8.282 ns                ;
+; N/A                                     ; 117.14 MHz ( period = 8.537 ns )                    ; BUFFER_SCR[3]  ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 8.281 ns                ;
+; N/A                                     ; 117.18 MHz ( period = 8.534 ns )                    ; BUFFER_SCR[3]  ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 8.278 ns                ;
+; N/A                                     ; 117.22 MHz ( period = 8.531 ns )                    ; BUFFER_SCR[3]  ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 8.275 ns                ;
+; N/A                                     ; 117.45 MHz ( period = 8.514 ns )                    ; BUFFER_SCR[17] ; STATUS.0001    ; CLK        ; CLK      ; None                        ; None                      ; 8.249 ns                ;
+; N/A                                     ; 117.45 MHz ( period = 8.514 ns )                    ; BUFFER_SCR[17] ; STATUS.1100    ; CLK        ; CLK      ; None                        ; None                      ; 8.249 ns                ;
+; N/A                                     ; 117.50 MHz ( period = 8.511 ns )                    ; BUFFER_SCR[3]  ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 8.256 ns                ;
+; N/A                                     ; 117.51 MHz ( period = 8.510 ns )                    ; BUFFER_SCR[3]  ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 8.255 ns                ;
+; N/A                                     ; 117.51 MHz ( period = 8.510 ns )                    ; BUFFER_SCR[3]  ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 8.255 ns                ;
+; N/A                                     ; 117.61 MHz ( period = 8.503 ns )                    ; BUFFER_SCR[3]  ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 8.248 ns                ;
+; N/A                                     ; 117.92 MHz ( period = 8.480 ns )                    ; BUFFER_SCR[11] ; STATUS.0001    ; CLK        ; CLK      ; None                        ; None                      ; 8.215 ns                ;
+; N/A                                     ; 117.92 MHz ( period = 8.480 ns )                    ; BUFFER_SCR[11] ; STATUS.1100    ; CLK        ; CLK      ; None                        ; None                      ; 8.215 ns                ;
+; N/A                                     ; 118.36 MHz ( period = 8.449 ns )                    ; BUFFER_SCR[12] ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 8.197 ns                ;
+; N/A                                     ; 118.36 MHz ( period = 8.449 ns )                    ; BUFFER_SCR[12] ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 8.197 ns                ;
+; N/A                                     ; 118.41 MHz ( period = 8.445 ns )                    ; BUFFER_SCR[12] ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 8.193 ns                ;
+; N/A                                     ; 118.43 MHz ( period = 8.444 ns )                    ; BUFFER_SCR[12] ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 8.192 ns                ;
+; N/A                                     ; 118.47 MHz ( period = 8.441 ns )                    ; BUFFER_SCR[12] ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 8.189 ns                ;
+; N/A                                     ; 118.51 MHz ( period = 8.438 ns )                    ; BUFFER_SCR[12] ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 8.186 ns                ;
+; N/A                                     ; 118.57 MHz ( period = 8.434 ns )                    ; BUFFER_SCR[1]  ; STATUS.0001    ; CLK        ; CLK      ; None                        ; None                      ; 8.165 ns                ;
+; N/A                                     ; 118.57 MHz ( period = 8.434 ns )                    ; BUFFER_SCR[1]  ; STATUS.1100    ; CLK        ; CLK      ; None                        ; None                      ; 8.165 ns                ;
+; N/A                                     ; 118.79 MHz ( period = 8.418 ns )                    ; BUFFER_SCR[12] ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 8.167 ns                ;
+; N/A                                     ; 118.81 MHz ( period = 8.417 ns )                    ; BUFFER_SCR[12] ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 8.166 ns                ;
+; N/A                                     ; 118.81 MHz ( period = 8.417 ns )                    ; BUFFER_SCR[12] ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 8.166 ns                ;
+; N/A                                     ; 118.91 MHz ( period = 8.410 ns )                    ; BUFFER_SCR[12] ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 8.159 ns                ;
+; N/A                                     ; 119.39 MHz ( period = 8.376 ns )                    ; BUFFER_SCR[4]  ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 8.120 ns                ;
+; N/A                                     ; 119.39 MHz ( period = 8.376 ns )                    ; BUFFER_SCR[4]  ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 8.120 ns                ;
+; N/A                                     ; 119.45 MHz ( period = 8.372 ns )                    ; BUFFER_SCR[4]  ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 8.116 ns                ;
+; N/A                                     ; 119.46 MHz ( period = 8.371 ns )                    ; BUFFER_SCR[4]  ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 8.115 ns                ;
+; N/A                                     ; 119.50 MHz ( period = 8.368 ns )                    ; BUFFER_SCR[4]  ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 8.112 ns                ;
+; N/A                                     ; 119.55 MHz ( period = 8.365 ns )                    ; BUFFER_SCR[4]  ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 8.109 ns                ;
+; N/A                                     ; 119.69 MHz ( period = 8.355 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[2]  ; CLK        ; CLK      ; None                        ; None                      ; 8.091 ns                ;
+; N/A                                     ; 119.69 MHz ( period = 8.355 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[6]  ; CLK        ; CLK      ; None                        ; None                      ; 8.091 ns                ;
+; N/A                                     ; 119.69 MHz ( period = 8.355 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[1]  ; CLK        ; CLK      ; None                        ; None                      ; 8.091 ns                ;
+; N/A                                     ; 119.69 MHz ( period = 8.355 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[4]  ; CLK        ; CLK      ; None                        ; None                      ; 8.091 ns                ;
+; N/A                                     ; 119.69 MHz ( period = 8.355 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[0]  ; CLK        ; CLK      ; None                        ; None                      ; 8.091 ns                ;
+; N/A                                     ; 119.69 MHz ( period = 8.355 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[9]  ; CLK        ; CLK      ; None                        ; None                      ; 8.091 ns                ;
+; N/A                                     ; 119.69 MHz ( period = 8.355 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[5]  ; CLK        ; CLK      ; None                        ; None                      ; 8.091 ns                ;
+; N/A                                     ; 119.69 MHz ( period = 8.355 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[7]  ; CLK        ; CLK      ; None                        ; None                      ; 8.091 ns                ;
+; N/A                                     ; 119.69 MHz ( period = 8.355 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[3]  ; CLK        ; CLK      ; None                        ; None                      ; 8.091 ns                ;
+; N/A                                     ; 119.69 MHz ( period = 8.355 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[8]  ; CLK        ; CLK      ; None                        ; None                      ; 8.091 ns                ;
+; N/A                                     ; 119.83 MHz ( period = 8.345 ns )                    ; BUFFER_SCR[4]  ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 8.090 ns                ;
+; N/A                                     ; 119.85 MHz ( period = 8.344 ns )                    ; BUFFER_SCR[4]  ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 8.089 ns                ;
+; N/A                                     ; 119.85 MHz ( period = 8.344 ns )                    ; BUFFER_SCR[4]  ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 8.089 ns                ;
+; N/A                                     ; 119.92 MHz ( period = 8.339 ns )                    ; BUFFER_SCR[3]  ; STATUS.0001    ; CLK        ; CLK      ; None                        ; None                      ; 8.070 ns                ;
+; N/A                                     ; 119.92 MHz ( period = 8.339 ns )                    ; BUFFER_SCR[3]  ; STATUS.1100    ; CLK        ; CLK      ; None                        ; None                      ; 8.070 ns                ;
+; N/A                                     ; 119.95 MHz ( period = 8.337 ns )                    ; BUFFER_SCR[4]  ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 8.082 ns                ;
+; N/A                                     ; 120.08 MHz ( period = 8.328 ns )                    ; BUFFER_SCR[2]  ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 8.072 ns                ;
+; N/A                                     ; 120.08 MHz ( period = 8.328 ns )                    ; BUFFER_SCR[2]  ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 8.072 ns                ;
+; N/A                                     ; 120.13 MHz ( period = 8.324 ns )                    ; BUFFER_SCR[2]  ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 8.068 ns                ;
+; N/A                                     ; 120.15 MHz ( period = 8.323 ns )                    ; BUFFER_SCR[2]  ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 8.067 ns                ;
+; N/A                                     ; 120.19 MHz ( period = 8.320 ns )                    ; BUFFER_SCR[2]  ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 8.064 ns                ;
+; N/A                                     ; 120.24 MHz ( period = 8.317 ns )                    ; BUFFER_SCR[2]  ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 8.061 ns                ;
+; N/A                                     ; 120.53 MHz ( period = 8.297 ns )                    ; BUFFER_SCR[2]  ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 8.042 ns                ;
+; N/A                                     ; 120.54 MHz ( period = 8.296 ns )                    ; BUFFER_SCR[2]  ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 8.041 ns                ;
+; N/A                                     ; 120.54 MHz ( period = 8.296 ns )                    ; BUFFER_SCR[2]  ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 8.041 ns                ;
+; N/A                                     ; 120.64 MHz ( period = 8.289 ns )                    ; BUFFER_SCR[2]  ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 8.034 ns                ;
+; N/A                                     ; 121.27 MHz ( period = 8.246 ns )                    ; BUFFER_SCR[12] ; STATUS.0001    ; CLK        ; CLK      ; None                        ; None                      ; 7.981 ns                ;
+; N/A                                     ; 121.27 MHz ( period = 8.246 ns )                    ; BUFFER_SCR[12] ; STATUS.1100    ; CLK        ; CLK      ; None                        ; None                      ; 7.981 ns                ;
+; N/A                                     ; 121.33 MHz ( period = 8.242 ns )                    ; BUFFER_SCR[18] ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 7.990 ns                ;
+; N/A                                     ; 121.33 MHz ( period = 8.242 ns )                    ; BUFFER_SCR[18] ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 7.990 ns                ;
+; N/A                                     ; 121.39 MHz ( period = 8.238 ns )                    ; BUFFER_SCR[18] ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 7.986 ns                ;
+; N/A                                     ; 121.40 MHz ( period = 8.237 ns )                    ; BUFFER_SCR[18] ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 7.985 ns                ;
+; N/A                                     ; 121.45 MHz ( period = 8.234 ns )                    ; BUFFER_SCR[18] ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 7.982 ns                ;
+; N/A                                     ; 121.49 MHz ( period = 8.231 ns )                    ; BUFFER_SCR[18] ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 7.979 ns                ;
+; N/A                                     ; 121.51 MHz ( period = 8.230 ns )                    ; BUFFER_SCR[7]  ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 7.974 ns                ;
+; N/A                                     ; 121.51 MHz ( period = 8.230 ns )                    ; BUFFER_SCR[7]  ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 7.974 ns                ;
+; N/A                                     ; 121.57 MHz ( period = 8.226 ns )                    ; BUFFER_SCR[7]  ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 7.970 ns                ;
+; N/A                                     ; 121.58 MHz ( period = 8.225 ns )                    ; BUFFER_SCR[7]  ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 7.969 ns                ;
+; N/A                                     ; 121.62 MHz ( period = 8.222 ns )                    ; BUFFER_SCR[7]  ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 7.966 ns                ;
+; N/A                                     ; 121.67 MHz ( period = 8.219 ns )                    ; BUFFER_SCR[7]  ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 7.963 ns                ;
+; N/A                                     ; 121.79 MHz ( period = 8.211 ns )                    ; BUFFER_SCR[18] ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 7.960 ns                ;
+; N/A                                     ; 121.80 MHz ( period = 8.210 ns )                    ; BUFFER_SCR[18] ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 7.959 ns                ;
+; N/A                                     ; 121.80 MHz ( period = 8.210 ns )                    ; BUFFER_SCR[18] ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 7.959 ns                ;
+; N/A                                     ; 121.91 MHz ( period = 8.203 ns )                    ; BUFFER_SCR[18] ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 7.952 ns                ;
+; N/A                                     ; 121.97 MHz ( period = 8.199 ns )                    ; BUFFER_SCR[7]  ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 7.944 ns                ;
+; N/A                                     ; 121.98 MHz ( period = 8.198 ns )                    ; BUFFER_SCR[7]  ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 7.943 ns                ;
+; N/A                                     ; 121.98 MHz ( period = 8.198 ns )                    ; BUFFER_SCR[7]  ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 7.943 ns                ;
+; N/A                                     ; 122.09 MHz ( period = 8.191 ns )                    ; BUFFER_SCR[7]  ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 7.936 ns                ;
+; N/A                                     ; 122.35 MHz ( period = 8.173 ns )                    ; BUFFER_SCR[4]  ; STATUS.0001    ; CLK        ; CLK      ; None                        ; None                      ; 7.904 ns                ;
+; N/A                                     ; 122.35 MHz ( period = 8.173 ns )                    ; BUFFER_SCR[4]  ; STATUS.1100    ; CLK        ; CLK      ; None                        ; None                      ; 7.904 ns                ;
+; N/A                                     ; 122.55 MHz ( period = 8.160 ns )                    ; BUFFER_SCR[6]  ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 7.904 ns                ;
+; N/A                                     ; 122.55 MHz ( period = 8.160 ns )                    ; BUFFER_SCR[6]  ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 7.904 ns                ;
+; N/A                                     ; 122.58 MHz ( period = 8.158 ns )                    ; BUFFER_SCR[5]  ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 7.902 ns                ;
+; N/A                                     ; 122.58 MHz ( period = 8.158 ns )                    ; BUFFER_SCR[5]  ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 7.902 ns                ;
+; N/A                                     ; 122.61 MHz ( period = 8.156 ns )                    ; BUFFER_SCR[6]  ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 7.900 ns                ;
+; N/A                                     ; 122.62 MHz ( period = 8.155 ns )                    ; BUFFER_SCR[6]  ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 7.899 ns                ;
+; N/A                                     ; 122.64 MHz ( period = 8.154 ns )                    ; BUFFER_SCR[5]  ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 7.898 ns                ;
+; N/A                                     ; 122.65 MHz ( period = 8.153 ns )                    ; BUFFER_SCR[5]  ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 7.897 ns                ;
+; N/A                                     ; 122.67 MHz ( period = 8.152 ns )                    ; BUFFER_SCR[6]  ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 7.896 ns                ;
+; N/A                                     ; 122.70 MHz ( period = 8.150 ns )                    ; BUFFER_SCR[5]  ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 7.894 ns                ;
+; N/A                                     ; 122.71 MHz ( period = 8.149 ns )                    ; BUFFER_SCR[6]  ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 7.893 ns                ;
+; N/A                                     ; 122.74 MHz ( period = 8.147 ns )                    ; BUFFER_SCR[5]  ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 7.891 ns                ;
+; N/A                                     ; 123.02 MHz ( period = 8.129 ns )                    ; BUFFER_SCR[6]  ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 7.874 ns                ;
+; N/A                                     ; 123.03 MHz ( period = 8.128 ns )                    ; BUFFER_SCR[6]  ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 7.873 ns                ;
+; N/A                                     ; 123.03 MHz ( period = 8.128 ns )                    ; BUFFER_SCR[6]  ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 7.873 ns                ;
+; N/A                                     ; 123.05 MHz ( period = 8.127 ns )                    ; BUFFER_SCR[5]  ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 7.872 ns                ;
+; N/A                                     ; 123.06 MHz ( period = 8.126 ns )                    ; BUFFER_SCR[5]  ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 7.871 ns                ;
+; N/A                                     ; 123.06 MHz ( period = 8.126 ns )                    ; BUFFER_SCR[5]  ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 7.871 ns                ;
+; N/A                                     ; 123.08 MHz ( period = 8.125 ns )                    ; BUFFER_SCR[2]  ; STATUS.0001    ; CLK        ; CLK      ; None                        ; None                      ; 7.856 ns                ;
+; N/A                                     ; 123.08 MHz ( period = 8.125 ns )                    ; BUFFER_SCR[2]  ; STATUS.1100    ; CLK        ; CLK      ; None                        ; None                      ; 7.856 ns                ;
+; N/A                                     ; 123.14 MHz ( period = 8.121 ns )                    ; BUFFER_SCR[6]  ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 7.866 ns                ;
+; N/A                                     ; 123.17 MHz ( period = 8.119 ns )                    ; BUFFER_SCR[5]  ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 7.864 ns                ;
+; N/A                                     ; 123.47 MHz ( period = 8.099 ns )                    ; BUFFER_SCR[14] ; STATUS.0111    ; CLK        ; CLK      ; None                        ; None                      ; 7.847 ns                ;
+; N/A                                     ; 123.47 MHz ( period = 8.099 ns )                    ; BUFFER_SCR[14] ; STATUS.1001    ; CLK        ; CLK      ; None                        ; None                      ; 7.847 ns                ;
+; N/A                                     ; 123.53 MHz ( period = 8.095 ns )                    ; BUFFER_SCR[14] ; STATUS.0100    ; CLK        ; CLK      ; None                        ; None                      ; 7.843 ns                ;
+; N/A                                     ; 123.55 MHz ( period = 8.094 ns )                    ; BUFFER_SCR[14] ; STATUS.0010    ; CLK        ; CLK      ; None                        ; None                      ; 7.842 ns                ;
+; N/A                                     ; 123.59 MHz ( period = 8.091 ns )                    ; BUFFER_SCR[14] ; STATUS.1000    ; CLK        ; CLK      ; None                        ; None                      ; 7.839 ns                ;
+; N/A                                     ; 123.64 MHz ( period = 8.088 ns )                    ; BUFFER_SCR[14] ; STATUS.1010    ; CLK        ; CLK      ; None                        ; None                      ; 7.836 ns                ;
+; N/A                                     ; 123.95 MHz ( period = 8.068 ns )                    ; BUFFER_SCR[14] ; STATUS.0011    ; CLK        ; CLK      ; None                        ; None                      ; 7.817 ns                ;
+; N/A                                     ; 123.96 MHz ( period = 8.067 ns )                    ; BUFFER_SCR[14] ; STATUS.0110    ; CLK        ; CLK      ; None                        ; None                      ; 7.816 ns                ;
+; N/A                                     ; 123.96 MHz ( period = 8.067 ns )                    ; BUFFER_SCR[14] ; STATUS.1011    ; CLK        ; CLK      ; None                        ; None                      ; 7.816 ns                ;
+; N/A                                     ; 124.07 MHz ( period = 8.060 ns )                    ; BUFFER_SCR[14] ; STATUS.0101    ; CLK        ; CLK      ; None                        ; None                      ; 7.809 ns                ;
+; N/A                                     ; 124.27 MHz ( period = 8.047 ns )                    ; BUFFER_SCR[7]  ; BUFFER_SCR[2]  ; CLK        ; CLK      ; None                        ; None                      ; 7.783 ns                ;
+; N/A                                     ; 124.27 MHz ( period = 8.047 ns )                    ; BUFFER_SCR[7]  ; BUFFER_SCR[6]  ; CLK        ; CLK      ; None                        ; None                      ; 7.783 ns                ;
+; N/A                                     ; 124.27 MHz ( period = 8.047 ns )                    ; BUFFER_SCR[7]  ; BUFFER_SCR[1]  ; CLK        ; CLK      ; None                        ; None                      ; 7.783 ns                ;
+; N/A                                     ; 124.27 MHz ( period = 8.047 ns )                    ; BUFFER_SCR[7]  ; BUFFER_SCR[4]  ; CLK        ; CLK      ; None                        ; None                      ; 7.783 ns                ;
+; N/A                                     ; 124.27 MHz ( period = 8.047 ns )                    ; BUFFER_SCR[7]  ; BUFFER_SCR[0]  ; CLK        ; CLK      ; None                        ; None                      ; 7.783 ns                ;
+; N/A                                     ; 124.27 MHz ( period = 8.047 ns )                    ; BUFFER_SCR[7]  ; BUFFER_SCR[9]  ; CLK        ; CLK      ; None                        ; None                      ; 7.783 ns                ;
+; N/A                                     ; 124.27 MHz ( period = 8.047 ns )                    ; BUFFER_SCR[7]  ; BUFFER_SCR[5]  ; CLK        ; CLK      ; None                        ; None                      ; 7.783 ns                ;
+; N/A                                     ; 124.27 MHz ( period = 8.047 ns )                    ; BUFFER_SCR[7]  ; BUFFER_SCR[7]  ; CLK        ; CLK      ; None                        ; None                      ; 7.783 ns                ;
+; N/A                                     ; 124.27 MHz ( period = 8.047 ns )                    ; BUFFER_SCR[7]  ; BUFFER_SCR[3]  ; CLK        ; CLK      ; None                        ; None                      ; 7.783 ns                ;
+; N/A                                     ; 124.27 MHz ( period = 8.047 ns )                    ; BUFFER_SCR[7]  ; BUFFER_SCR[8]  ; CLK        ; CLK      ; None                        ; None                      ; 7.783 ns                ;
+; N/A                                     ; 124.39 MHz ( period = 8.039 ns )                    ; BUFFER_SCR[18] ; STATUS.0001    ; CLK        ; CLK      ; None                        ; None                      ; 7.774 ns                ;
+; N/A                                     ; 124.39 MHz ( period = 8.039 ns )                    ; BUFFER_SCR[18] ; STATUS.1100    ; CLK        ; CLK      ; None                        ; None                      ; 7.774 ns                ;
+; N/A                                     ; 124.58 MHz ( period = 8.027 ns )                    ; BUFFER_SCR[7]  ; STATUS.0001    ; CLK        ; CLK      ; None                        ; None                      ; 7.758 ns                ;
+; N/A                                     ; 124.58 MHz ( period = 8.027 ns )                    ; BUFFER_SCR[7]  ; STATUS.1100    ; CLK        ; CLK      ; None                        ; None                      ; 7.758 ns                ;
+; N/A                                     ; 124.61 MHz ( period = 8.025 ns )                    ; BUFFER_SCR[3]  ; BUFFER_SCR[2]  ; CLK        ; CLK      ; None                        ; None                      ; 7.761 ns                ;
+; N/A                                     ; 124.61 MHz ( period = 8.025 ns )                    ; BUFFER_SCR[3]  ; BUFFER_SCR[6]  ; CLK        ; CLK      ; None                        ; None                      ; 7.761 ns                ;
+; N/A                                     ; 124.61 MHz ( period = 8.025 ns )                    ; BUFFER_SCR[3]  ; BUFFER_SCR[1]  ; CLK        ; CLK      ; None                        ; None                      ; 7.761 ns                ;
+; N/A                                     ; 124.61 MHz ( period = 8.025 ns )                    ; BUFFER_SCR[3]  ; BUFFER_SCR[4]  ; CLK        ; CLK      ; None                        ; None                      ; 7.761 ns                ;
+; N/A                                     ; 124.61 MHz ( period = 8.025 ns )                    ; BUFFER_SCR[3]  ; BUFFER_SCR[0]  ; CLK        ; CLK      ; None                        ; None                      ; 7.761 ns                ;
+; N/A                                     ; 124.61 MHz ( period = 8.025 ns )                    ; BUFFER_SCR[3]  ; BUFFER_SCR[9]  ; CLK        ; CLK      ; None                        ; None                      ; 7.761 ns                ;
+; N/A                                     ; 124.61 MHz ( period = 8.025 ns )                    ; BUFFER_SCR[3]  ; BUFFER_SCR[5]  ; CLK        ; CLK      ; None                        ; None                      ; 7.761 ns                ;
+; N/A                                     ; 124.61 MHz ( period = 8.025 ns )                    ; BUFFER_SCR[3]  ; BUFFER_SCR[7]  ; CLK        ; CLK      ; None                        ; None                      ; 7.761 ns                ;
+; N/A                                     ; 124.61 MHz ( period = 8.025 ns )                    ; BUFFER_SCR[3]  ; BUFFER_SCR[3]  ; CLK        ; CLK      ; None                        ; None                      ; 7.761 ns                ;
+; N/A                                     ; 124.61 MHz ( period = 8.025 ns )                    ; BUFFER_SCR[3]  ; BUFFER_SCR[8]  ; CLK        ; CLK      ; None                        ; None                      ; 7.761 ns                ;
+; N/A                                     ; 125.66 MHz ( period = 7.958 ns )                    ; BUFFER_SCR[15] ; BUFFER_SCR[2]  ; CLK        ; CLK      ; None                        ; None                      ; 7.698 ns                ;
+; N/A                                     ; 125.66 MHz ( period = 7.958 ns )                    ; BUFFER_SCR[15] ; BUFFER_SCR[6]  ; CLK        ; CLK      ; None                        ; None                      ; 7.698 ns                ;
+; N/A                                     ; 125.66 MHz ( period = 7.958 ns )                    ; BUFFER_SCR[15] ; BUFFER_SCR[1]  ; CLK        ; CLK      ; None                        ; None                      ; 7.698 ns                ;
+; N/A                                     ; 125.66 MHz ( period = 7.958 ns )                    ; BUFFER_SCR[15] ; BUFFER_SCR[4]  ; CLK        ; CLK      ; None                        ; None                      ; 7.698 ns                ;
+; N/A                                     ; 125.66 MHz ( period = 7.958 ns )                    ; BUFFER_SCR[15] ; BUFFER_SCR[0]  ; CLK        ; CLK      ; None                        ; None                      ; 7.698 ns                ;
+; N/A                                     ; 125.66 MHz ( period = 7.958 ns )                    ; BUFFER_SCR[15] ; BUFFER_SCR[9]  ; CLK        ; CLK      ; None                        ; None                      ; 7.698 ns                ;
+; N/A                                     ; 125.66 MHz ( period = 7.958 ns )                    ; BUFFER_SCR[15] ; BUFFER_SCR[5]  ; CLK        ; CLK      ; None                        ; None                      ; 7.698 ns                ;
+; N/A                                     ; 125.66 MHz ( period = 7.958 ns )                    ; BUFFER_SCR[15] ; BUFFER_SCR[7]  ; CLK        ; CLK      ; None                        ; None                      ; 7.698 ns                ;
+; N/A                                     ; 125.66 MHz ( period = 7.958 ns )                    ; BUFFER_SCR[15] ; BUFFER_SCR[3]  ; CLK        ; CLK      ; None                        ; None                      ; 7.698 ns                ;
+; N/A                                     ; 125.66 MHz ( period = 7.958 ns )                    ; BUFFER_SCR[15] ; BUFFER_SCR[8]  ; CLK        ; CLK      ; None                        ; None                      ; 7.698 ns                ;
+; N/A                                     ; 125.68 MHz ( period = 7.957 ns )                    ; BUFFER_SCR[6]  ; STATUS.0001    ; CLK        ; CLK      ; None                        ; None                      ; 7.688 ns                ;
+; N/A                                     ; 125.68 MHz ( period = 7.957 ns )                    ; BUFFER_SCR[6]  ; STATUS.1100    ; CLK        ; CLK      ; None                        ; None                      ; 7.688 ns                ;
+; N/A                                     ; 125.71 MHz ( period = 7.955 ns )                    ; BUFFER_SCR[5]  ; STATUS.0001    ; CLK        ; CLK      ; None                        ; None                      ; 7.686 ns                ;
+; N/A                                     ; 125.71 MHz ( period = 7.955 ns )                    ; BUFFER_SCR[5]  ; STATUS.1100    ; CLK        ; CLK      ; None                        ; None                      ; 7.686 ns                ;
+; N/A                                     ; 125.83 MHz ( period = 7.947 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[17] ; CLK        ; CLK      ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 125.83 MHz ( period = 7.947 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[18] ; CLK        ; CLK      ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 125.83 MHz ( period = 7.947 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[14] ; CLK        ; CLK      ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 125.83 MHz ( period = 7.947 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[12] ; CLK        ; CLK      ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 125.83 MHz ( period = 7.947 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[10] ; CLK        ; CLK      ; None                        ; None                      ; 7.679 ns                ;
+; N/A                                     ; 125.83 MHz ( period = 7.947 ns )                    ; BUFFER_SCR[5]  ; BUFFER_SCR[13] ; CLK        ; CLK      ; None                        ; None                      ; 7.679 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                ;                ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+----------------+----------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------+
+; tsu                                                                  ;
++-------+--------------+------------+------+----------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To             ; To Clock ;
++-------+--------------+------------+------+----------------+----------+
+; N/A   ; None         ; 8.438 ns   ; ctrl ; BUFFER_SCR[2]  ; CLK      ;
+; N/A   ; None         ; 8.438 ns   ; ctrl ; BUFFER_SCR[6]  ; CLK      ;
+; N/A   ; None         ; 8.438 ns   ; ctrl ; BUFFER_SCR[1]  ; CLK      ;
+; N/A   ; None         ; 8.438 ns   ; ctrl ; BUFFER_SCR[4]  ; CLK      ;
+; N/A   ; None         ; 8.438 ns   ; ctrl ; BUFFER_SCR[0]  ; CLK      ;
+; N/A   ; None         ; 8.438 ns   ; ctrl ; BUFFER_SCR[9]  ; CLK      ;
+; N/A   ; None         ; 8.438 ns   ; ctrl ; BUFFER_SCR[5]  ; CLK      ;
+; N/A   ; None         ; 8.438 ns   ; ctrl ; BUFFER_SCR[7]  ; CLK      ;
+; N/A   ; None         ; 8.438 ns   ; ctrl ; BUFFER_SCR[3]  ; CLK      ;
+; N/A   ; None         ; 8.438 ns   ; ctrl ; BUFFER_SCR[8]  ; CLK      ;
+; N/A   ; None         ; 8.030 ns   ; ctrl ; BUFFER_SCR[16] ; CLK      ;
+; N/A   ; None         ; 8.030 ns   ; ctrl ; BUFFER_SCR[19] ; CLK      ;
+; N/A   ; None         ; 8.030 ns   ; ctrl ; BUFFER_SCR[15] ; CLK      ;
+; N/A   ; None         ; 8.030 ns   ; ctrl ; BUFFER_SCR[17] ; CLK      ;
+; N/A   ; None         ; 8.030 ns   ; ctrl ; BUFFER_SCR[18] ; CLK      ;
+; N/A   ; None         ; 8.030 ns   ; ctrl ; BUFFER_SCR[14] ; CLK      ;
+; N/A   ; None         ; 8.030 ns   ; ctrl ; BUFFER_SCR[12] ; CLK      ;
+; N/A   ; None         ; 8.030 ns   ; ctrl ; BUFFER_SCR[10] ; CLK      ;
+; N/A   ; None         ; 8.030 ns   ; ctrl ; BUFFER_SCR[13] ; CLK      ;
+; N/A   ; None         ; 8.030 ns   ; ctrl ; BUFFER_SCR[11] ; CLK      ;
+; N/A   ; None         ; 6.135 ns   ; ctrl ; SCR5~reg0      ; CLK      ;
+; N/A   ; None         ; 6.133 ns   ; ctrl ; SCR1~reg0      ; CLK      ;
+; N/A   ; None         ; 5.946 ns   ; ctrl ; SCR4~reg0      ; CLK      ;
+; N/A   ; None         ; 5.944 ns   ; ctrl ; SCR2~reg0      ; CLK      ;
+; N/A   ; None         ; 5.944 ns   ; ctrl ; SCR3~reg0      ; CLK      ;
+; N/A   ; None         ; 5.586 ns   ; ctrl ; SCR6~reg0      ; CLK      ;
++-------+--------------+------------+------+----------------+----------+
+
+
++-------------------------------------------------------------------+
+; tco                                                               ;
++-------+--------------+------------+-----------+------+------------+
+; Slack ; Required tco ; Actual tco ; From      ; To   ; From Clock ;
++-------+--------------+------------+-----------+------+------------+
+; N/A   ; None         ; 9.294 ns   ; SCR6~reg0 ; SCR6 ; CLK        ;
+; N/A   ; None         ; 8.830 ns   ; SCR4~reg0 ; SCR4 ; CLK        ;
+; N/A   ; None         ; 8.810 ns   ; SCR5~reg0 ; SCR5 ; CLK        ;
+; N/A   ; None         ; 8.806 ns   ; SCR3~reg0 ; SCR3 ; CLK        ;
+; N/A   ; None         ; 8.794 ns   ; SCR1~reg0 ; SCR1 ; CLK        ;
+; N/A   ; None         ; 8.785 ns   ; SCR2~reg0 ; SCR2 ; CLK        ;
++-------+--------------+------------+-----------+------+------------+
+
+
++----------------------------------------------------------------------------+
+; th                                                                         ;
++---------------+-------------+-----------+------+----------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To             ; To Clock ;
++---------------+-------------+-----------+------+----------------+----------+
+; N/A           ; None        ; -5.320 ns ; ctrl ; SCR6~reg0      ; CLK      ;
+; N/A           ; None        ; -5.339 ns ; ctrl ; BUFFER_SCR[12] ; CLK      ;
+; N/A           ; None        ; -5.339 ns ; ctrl ; BUFFER_SCR[10] ; CLK      ;
+; N/A           ; None        ; -5.339 ns ; ctrl ; BUFFER_SCR[13] ; CLK      ;
+; N/A           ; None        ; -5.339 ns ; ctrl ; BUFFER_SCR[11] ; CLK      ;
+; N/A           ; None        ; -5.341 ns ; ctrl ; BUFFER_SCR[18] ; CLK      ;
+; N/A           ; None        ; -5.649 ns ; ctrl ; BUFFER_SCR[0]  ; CLK      ;
+; N/A           ; None        ; -5.651 ns ; ctrl ; BUFFER_SCR[4]  ; CLK      ;
+; N/A           ; None        ; -5.651 ns ; ctrl ; BUFFER_SCR[8]  ; CLK      ;
+; N/A           ; None        ; -5.678 ns ; ctrl ; SCR2~reg0      ; CLK      ;
+; N/A           ; None        ; -5.678 ns ; ctrl ; SCR3~reg0      ; CLK      ;
+; N/A           ; None        ; -5.680 ns ; ctrl ; SCR4~reg0      ; CLK      ;
+; N/A           ; None        ; -5.867 ns ; ctrl ; SCR1~reg0      ; CLK      ;
+; N/A           ; None        ; -5.869 ns ; ctrl ; SCR5~reg0      ; CLK      ;
+; N/A           ; None        ; -7.764 ns ; ctrl ; BUFFER_SCR[16] ; CLK      ;
+; N/A           ; None        ; -7.764 ns ; ctrl ; BUFFER_SCR[19] ; CLK      ;
+; N/A           ; None        ; -7.764 ns ; ctrl ; BUFFER_SCR[15] ; CLK      ;
+; N/A           ; None        ; -7.764 ns ; ctrl ; BUFFER_SCR[17] ; CLK      ;
+; N/A           ; None        ; -7.764 ns ; ctrl ; BUFFER_SCR[14] ; CLK      ;
+; N/A           ; None        ; -8.172 ns ; ctrl ; BUFFER_SCR[2]  ; CLK      ;
+; N/A           ; None        ; -8.172 ns ; ctrl ; BUFFER_SCR[6]  ; CLK      ;
+; N/A           ; None        ; -8.172 ns ; ctrl ; BUFFER_SCR[1]  ; CLK      ;
+; N/A           ; None        ; -8.172 ns ; ctrl ; BUFFER_SCR[9]  ; CLK      ;
+; N/A           ; None        ; -8.172 ns ; ctrl ; BUFFER_SCR[5]  ; CLK      ;
+; N/A           ; None        ; -8.172 ns ; ctrl ; BUFFER_SCR[7]  ; CLK      ;
+; N/A           ; None        ; -8.172 ns ; ctrl ; BUFFER_SCR[3]  ; CLK      ;
++---------------+-------------+-----------+------+----------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Mar 19 15:52:40 2014
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off SCR -c SCR --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK" is an undefined clock
+Info: Clock "CLK" has Internal fmax of 113.52 MHz between source register "BUFFER_SCR[0]" and destination register "STATUS.0111" (period= 8.809 ns)
+    Info: + Longest register to register delay is 8.553 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X17_Y7_N13; Fanout = 5; REG Node = 'BUFFER_SCR[0]'
+        Info: 2: + IC(1.887 ns) + CELL(0.370 ns) = 2.257 ns; Loc. = LCCOMB_X15_Y2_N28; Fanout = 3; COMB Node = 'Equal3~166'
+        Info: 3: + IC(1.452 ns) + CELL(0.206 ns) = 3.915 ns; Loc. = LCCOMB_X17_Y6_N26; Fanout = 2; COMB Node = 'Equal3~169'
+        Info: 4: + IC(1.480 ns) + CELL(0.206 ns) = 5.601 ns; Loc. = LCCOMB_X15_Y8_N8; Fanout = 2; COMB Node = 'Equal3~172'
+        Info: 5: + IC(0.383 ns) + CELL(0.370 ns) = 6.354 ns; Loc. = LCCOMB_X15_Y8_N0; Fanout = 1; COMB Node = 'STATUS~745'
+        Info: 6: + IC(0.362 ns) + CELL(0.206 ns) = 6.922 ns; Loc. = LCCOMB_X15_Y8_N26; Fanout = 3; COMB Node = 'STATUS~746'
+        Info: 7: + IC(0.362 ns) + CELL(0.206 ns) = 7.490 ns; Loc. = LCCOMB_X15_Y8_N4; Fanout = 10; COMB Node = 'STATUS~748'
+        Info: 8: + IC(0.749 ns) + CELL(0.206 ns) = 8.445 ns; Loc. = LCCOMB_X14_Y8_N18; Fanout = 1; COMB Node = 'STATUS~754'
+        Info: 9: + IC(0.000 ns) + CELL(0.108 ns) = 8.553 ns; Loc. = LCFF_X14_Y8_N19; Fanout = 3; REG Node = 'STATUS.0111'
+        Info: Total cell delay = 1.878 ns ( 21.96 % )
+        Info: Total interconnect delay = 6.675 ns ( 78.04 % )
+    Info: - Smallest clock skew is 0.008 ns
+        Info: + Shortest clock path from clock "CLK" to destination register is 2.736 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 1; CLK Node = 'CLK'
+            Info: 2: + IC(0.143 ns) + CELL(0.000 ns) = 1.243 ns; Loc. = CLKCTRL_G2; Fanout = 38; COMB Node = 'CLK~clkctrl'
+            Info: 3: + IC(0.827 ns) + CELL(0.666 ns) = 2.736 ns; Loc. = LCFF_X14_Y8_N19; Fanout = 3; REG Node = 'STATUS.0111'
+            Info: Total cell delay = 1.766 ns ( 64.55 % )
+            Info: Total interconnect delay = 0.970 ns ( 35.45 % )
+        Info: - Longest clock path from clock "CLK" to source register is 2.728 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 1; CLK Node = 'CLK'
+            Info: 2: + IC(0.143 ns) + CELL(0.000 ns) = 1.243 ns; Loc. = CLKCTRL_G2; Fanout = 38; COMB Node = 'CLK~clkctrl'
+            Info: 3: + IC(0.819 ns) + CELL(0.666 ns) = 2.728 ns; Loc. = LCFF_X17_Y7_N13; Fanout = 5; REG Node = 'BUFFER_SCR[0]'
+            Info: Total cell delay = 1.766 ns ( 64.74 % )
+            Info: Total interconnect delay = 0.962 ns ( 35.26 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Micro setup delay of destination is -0.040 ns
+Info: tsu for register "BUFFER_SCR[2]" (data pin = "ctrl", clock pin = "CLK") is 8.438 ns
+    Info: + Longest pin to register delay is 11.206 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.954 ns) = 0.954 ns; Loc. = PIN_70; Fanout = 15; PIN Node = 'ctrl'
+        Info: 2: + IC(6.961 ns) + CELL(0.651 ns) = 8.566 ns; Loc. = LCCOMB_X15_Y2_N12; Fanout = 20; COMB Node = 'BUFFER_SCR[1]~470'
+        Info: 3: + IC(1.818 ns) + CELL(0.822 ns) = 11.206 ns; Loc. = LCFF_X17_Y7_N17; Fanout = 7; REG Node = 'BUFFER_SCR[2]'
+        Info: Total cell delay = 2.427 ns ( 21.66 % )
+        Info: Total interconnect delay = 8.779 ns ( 78.34 % )
+    Info: + Micro setup delay of destination is -0.040 ns
+    Info: - Shortest clock path from clock "CLK" to destination register is 2.728 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.143 ns) + CELL(0.000 ns) = 1.243 ns; Loc. = CLKCTRL_G2; Fanout = 38; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.819 ns) + CELL(0.666 ns) = 2.728 ns; Loc. = LCFF_X17_Y7_N17; Fanout = 7; REG Node = 'BUFFER_SCR[2]'
+        Info: Total cell delay = 1.766 ns ( 64.74 % )
+        Info: Total interconnect delay = 0.962 ns ( 35.26 % )
+Info: tco from clock "CLK" to destination pin "SCR6" through register "SCR6~reg0" is 9.294 ns
+    Info: + Longest clock path from clock "CLK" to source register is 2.744 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.143 ns) + CELL(0.000 ns) = 1.243 ns; Loc. = CLKCTRL_G2; Fanout = 38; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.835 ns) + CELL(0.666 ns) = 2.744 ns; Loc. = LCFF_X15_Y2_N25; Fanout = 2; REG Node = 'SCR6~reg0'
+        Info: Total cell delay = 1.766 ns ( 64.36 % )
+        Info: Total interconnect delay = 0.978 ns ( 35.64 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Longest register to pin delay is 6.246 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X15_Y2_N25; Fanout = 2; REG Node = 'SCR6~reg0'
+        Info: 2: + IC(3.010 ns) + CELL(3.236 ns) = 6.246 ns; Loc. = PIN_141; Fanout = 0; PIN Node = 'SCR6'
+        Info: Total cell delay = 3.236 ns ( 51.81 % )
+        Info: Total interconnect delay = 3.010 ns ( 48.19 % )
+Info: th for register "SCR6~reg0" (data pin = "ctrl", clock pin = "CLK") is -5.320 ns
+    Info: + Longest clock path from clock "CLK" to destination register is 2.744 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.100 ns) = 1.100 ns; Loc. = PIN_17; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.143 ns) + CELL(0.000 ns) = 1.243 ns; Loc. = CLKCTRL_G2; Fanout = 38; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.835 ns) + CELL(0.666 ns) = 2.744 ns; Loc. = LCFF_X15_Y2_N25; Fanout = 2; REG Node = 'SCR6~reg0'
+        Info: Total cell delay = 1.766 ns ( 64.36 % )
+        Info: Total interconnect delay = 0.978 ns ( 35.64 % )
+    Info: + Micro hold delay of destination is 0.306 ns
+    Info: - Shortest pin to register delay is 8.370 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.954 ns) = 0.954 ns; Loc. = PIN_70; Fanout = 15; PIN Node = 'ctrl'
+        Info: 2: + IC(6.938 ns) + CELL(0.370 ns) = 8.262 ns; Loc. = LCCOMB_X15_Y2_N24; Fanout = 1; COMB Node = 'SCR6~49'
+        Info: 3: + IC(0.000 ns) + CELL(0.108 ns) = 8.370 ns; Loc. = LCFF_X15_Y2_N25; Fanout = 2; REG Node = 'SCR6~reg0'
+        Info: Total cell delay = 1.432 ns ( 17.11 % )
+        Info: Total interconnect delay = 6.938 ns ( 82.89 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 125 megabytes
+    Info: Processing ended: Wed Mar 19 15:52:41 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

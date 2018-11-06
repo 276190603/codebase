@@ -1,0 +1,5 @@
+
+State Machine - |SCR|STATUS
+Name STATUS.0001 
+STATUS.0000 0 
+STATUS.0001 1 
