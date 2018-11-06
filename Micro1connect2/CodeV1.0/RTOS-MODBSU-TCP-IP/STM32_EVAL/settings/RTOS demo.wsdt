@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>RTOS demo/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>183</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1035</ColumnWidth1><ColumnWidth2>276</ColumnWidth2><ColumnWidth3>69</ColumnWidth3></Build>
+    <TerminalIO/><Disassembly><MixedMode>1</MixedMode><CodeCovShow>1</CodeCovShow><InstrProfShow>1</InstrProfShow></Disassembly><Find-in-Files><ColumnWidth0>649</ColumnWidth0><ColumnWidth1>70</ColumnWidth1><ColumnWidth2>850</ColumnWidth2></Find-in-Files><Debug-Log><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1381</ColumnWidth1></Debug-Log></Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-30581-17437</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>RTOS demo</ExpandedNode><ExpandedNode>RTOS demo/24cxx</ExpandedNode><ExpandedNode>RTOS demo/APP</ExpandedNode><ExpandedNode>RTOS demo/BMS</ExpandedNode><ExpandedNode>RTOS demo/DIPswitch</ExpandedNode><ExpandedNode>RTOS demo/GPIO</ExpandedNode><ExpandedNode>RTOS demo/IIC</ExpandedNode><ExpandedNode>RTOS demo/Output</ExpandedNode><ExpandedNode>RTOS demo/RS485</ExpandedNode><ExpandedNode>RTOS demo/UART5</ExpandedNode><ExpandedNode>RTOS demo/USART1</ExpandedNode><ExpandedNode>RTOS demo/USART2</ExpandedNode><ExpandedNode>RTOS demo/USART3</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3><Tabs><Tab><Identity>TabID-4089-24654</Identity><TabName>Build</TabName><Factory>Build</Factory><Session/></Tab><Tab><Identity>TabID-14181-17138</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-31726-22131</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab><Tab><Identity>TabID-28123-17990</Identity><TabName>Breakpoints</TabName><Factory>Breakpoints</Factory></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USART2\USART2.c</Filename><XPos>0</XPos><YPos>701</YPos><SelStart>12150</SelStart><SelEnd>12150</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\app.c</Filename><XPos>0</XPos><YPos>1214</YPos><SelStart>39024</SelStart><SelEnd>39028</SelEnd></Tab><ActiveTab>1</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\&#x4e1C;&#x8F6F;BMS&#x5FAe;&#x4e3B;&#x63A7;\+TCP&#x4e0A;&#x4F4D;&#x673A;+&#x62A5;&#x8B66;\RTOS-MODBSU-TCP-IP\uCOS-II\Ports\arm-cortex-m3\os_cpu_a.asm</Filename><XPos>0</XPos><YPos>79</YPos><SelStart>4224</SelStart><SelEnd>4224</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\24CXX\24cxx.c</Filename><XPos>0</XPos><YPos>273</YPos><SelStart>8062</SelStart><SelEnd>8062</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USART3\USART3.c</Filename><XPos>0</XPos><YPos>787</YPos><SelStart>14832</SelStart><SelEnd>14832</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\USART1\USART1.c</Filename><XPos>0</XPos><YPos>1159</YPos><SelStart>38595</SelStart><SelEnd>38595</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\UART5\UART5.c</Filename><XPos>0</XPos><YPos>157</YPos><SelStart>5618</SelStart><SelEnd>5618</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\GPIO\gpio_control.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>407</SelStart><SelEnd>407</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\IIC\myiic.c</Filename><XPos>0</XPos><YPos>126</YPos><SelStart>297</SelStart><SelEnd>297</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\GPIO\gpio_control.c</Filename><XPos>0</XPos><YPos>21</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-012ec598><key>iaridepm.enu1</key></Toolbar-012ec598></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>553</Bottom><Right>274</Right><x>-2</x><y>-2</y><xscreen>183</xscreen><yscreen>191</yscreen><sizeHorzCX>139269</sizeHorzCX><sizeHorzCY>242694</sizeHorzCY><sizeVertCX>210046</sizeVertCX><sizeVertCY>705210</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>189</Bottom><Right>1316</Right><x>-2</x><y>-2</y><xscreen>1318</xscreen><yscreen>191</yscreen><sizeHorzCX>1003044</sizeHorzCX><sizeHorzCY>242694</sizeHorzCY><sizeVertCX>139269</sizeVertCX><sizeVertCY>242694</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
