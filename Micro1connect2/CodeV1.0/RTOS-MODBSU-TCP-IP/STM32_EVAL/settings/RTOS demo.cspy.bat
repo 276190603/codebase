@@ -10,6 +10,6 @@
 @REM 
 
 
-"D:\development\IAR\common\bin\cspybat" "D:\development\IAR\arm\bin\armproc.dll" "D:\development\IAR\arm\bin\armjlink.dll"  %1 --plugin "D:\development\IAR\arm\bin\armbat.dll" --backend -B "--endian=little" "--cpu=Cortex-M3" "--fpu=None" "-p" "D:\development\IAR\arm\CONFIG\debugger\ST\iostm32f107xx.ddf" "--semihosting" "--device=STM32F107xC" "--drv_communication=USB0" "--jlink_speed=auto" "--jlink_initial_speed=2000" "--jlink_reset_strategy=0,0" "--drv_catch_exceptions=0x000" 
+"E:\Development\IAR EWARM V6.1\common\bin\cspybat" "E:\Development\IAR EWARM V6.1\arm\bin\armproc.dll" "E:\Development\IAR EWARM V6.1\arm\bin\armjlink.dll"  %1 --plugin "E:\Development\IAR EWARM V6.1\arm\bin\armbat.dll" --backend -B "--endian=little" "--cpu=Cortex-M3" "--fpu=None" "-p" "E:\Development\IAR EWARM V6.1\arm\CONFIG\debugger\ST\iostm32f107xx.ddf" "--semihosting" "--device=STM32F107xC" "--drv_communication=USB0" "--jlink_speed=auto" "--jlink_initial_speed=2000" "--jlink_reset_strategy=0,0" "--drv_catch_exceptions=0x000" 
 
 
