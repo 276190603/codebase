@@ -1291,7 +1291,6 @@ void  EXTI9_5_IRQHandler (void)
     if (!(ETH_ReadPHYRegister(0x01, 1) & ((u16)0x0004)))
     {
       Ethernet_Configuration();
-      
     }
   }
 }
